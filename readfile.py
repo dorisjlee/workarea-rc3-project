@@ -1,8 +1,4 @@
-counter = 0
-
-ralist = []
-declist = []
-radiuslist = []
+#Run in Python2 
 output =  open("rc3_formatted.txt", "w")
 output.write("ra          |")
 output.write("dec          |")
