@@ -1,0 +1,4 @@
+\datatype = fitshdr
+| cntr |      ra     |     dec     |      cra     |     cdec     |naxis1|naxis2| ctype1 | ctype2 |     crpix1    |     crpix2    |    crval1   |    crval2   |      cdelt1     |      cdelt2     |   crota2    |equinox |    size    | hdu  | fname                    |
+| int  |    double   |    double   |      char    |    char      | int  | int  |  char  |  char  |     double    |     double    |    double   |    double   |      double     |      double     |   double    |  double|     int    | int  | char                     |
+      0   139.5337115    -0.3142177 09h 18m 08.09s -00d 18m 51.2s   2048   1489 RA---TAN DEC--TAN      1025.00000       745.00000   139.5337666    -0.3141077 -1.0999649720e-04  1.0999652575e-04   269.9784688  2000.00     12447360      0 frame-r-001239-3-0128.fits 
