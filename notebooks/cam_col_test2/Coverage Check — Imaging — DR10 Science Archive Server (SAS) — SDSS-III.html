@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+
+<head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>A 404 Error has Occurred </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap-2.3.2.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap-responsive-2.3.2.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+    <script type="text/javascript" src="/javascript/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.tablesorter-2.0.5b.js"></script>
+    <script type="text/javascript" src="/javascript/picnet.table.filter.min.js"></script>
+    <script type="text/javascript" src="/javascript/bootstrap-2.3.2.js"></script>
+    <script type="text/javascript" src="/javascript/dr10webapp.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="masthead">
+            <h1 id="h1masthead">DR10 Science Archive Server (SAS)</h1>
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <!-- <a class="brand" href="http://www.sdss3.org"><img src="${tg.url('/images/turbogears_logo.png')}" alt="SDSS-III Logo"/>SDSS-III</a> -->
+                        <a class="brand" href="http://www.sdss3.org">SDSS-III</a>
+                        <ul class="nav nav-pills">
+                            <li class=""><a href="/">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" id="drop1" data-toggle="dropdown" data-target="#" href="/fields">Imaging<b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                    <li><a href="/fields">Single Fields</a></li>
+                                    <li><a href="/bulkFields">Bulk Search</a></li>
+                                    <li><a href="/coverageCheck">Coverage Check</a></li>
+                                    <li><a href="/mosaics">Mosaics</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" id="drop2" data-toggle="dropdown" data-target="#" href="/basicSpectra">Optical Spectra<b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                                    <li><a href="/basicSpectra">Basic Search</a></li>
+                                    <li><a href="/advancedSearch">Advanced Search</a></li>
+                                    <li><a href="/bulkSpectra">Bulk Search</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" id="drop3" data-toggle="dropdown" data-target="#" href="/basicIRSpectra">IR Spectra<b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                                    <li><a href="/basicIRSpectra">Basic Search</a></li>
+                                    <li><a href="/advancedIRSearch">Advanced Search</a></li>
+                                    <li><a href="/bulkIRSpectra">Bulk Search</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="/documentation">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flash messages -->
+          <div class="row"><div class="span8 offset2">
+          </div></div>
+        <!-- Main included content -->
+  <h1>Error 404</h1>
+  <div><p>We're sorry but we weren't able to process  this request.</p></div>
+        <!-- Footer included from an external template -->
+        <footer class="footer hidden-tablet hidden-phone">
+            <a class="pull-right" href="http://www.turbogears.org/2.2/"><img style="vertical-align:middle;" src="/images/under_the_hood_blue.png" alt="TurboGears 2" /></a>
+            <p>Copyright © 2010-2014 SDSS-III<br />
+            Version: dr10webapp/2.0.4<br />
+            <a href="mailto:helpdesk@sdss3.org">Contact the Developers</a></p>
+        </footer>
+    </div>
+</body>
+</html>
