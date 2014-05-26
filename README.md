@@ -11,3 +11,4 @@ Work area for rc3 catalog project
 - [Questions about Mosaic Creation] (http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/Questions%20about%20Mosaic%20Creation.ipynb)
 - [Problem of Centering Image](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/5-24-2014%20Problem%20of%20Centering%20Image%20.ipynb)
 - [Problem of Centering Image II](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/5-25-2014%20Problem%20of%20Centering%20Image%20(2).ipynb)
+-[5-25-2014_Questions and Summary](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/5-25-2014_Questions%20and%20Summary.ipynb)
