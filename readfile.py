@@ -1,8 +1,8 @@
 #Run in Python2 
-output =  open("rc3_formatted.txt", "w")
-output.write("ra          |")
-output.write("dec          |")
-output.write("radius          \n")
+output =  open("rc3_formatted_csv.txt", "w")
+#output.write("ra          |")
+#output.write("dec          |")
+#output.write("radius          \n")
 for line in file('rc3.txt'):
     x = float(line[0:2])
     y = float(line[2:4])
@@ -19,7 +19,7 @@ for line in file('rc3.txt'):
     dec = decval + (m/60) + (n/3600)
     if sign == '-':
        dec = -1*dec 
-    output.write(str(ra)+ "    ")
-    output.write(str(dec)+"    ")
-    output.write(str(radius)+"\n")
+    output.write(str(ra)+ ",")
+    output.write(str(dec)+"\n")
+    #output.write(str(radius)+"\n")
 output.close()
