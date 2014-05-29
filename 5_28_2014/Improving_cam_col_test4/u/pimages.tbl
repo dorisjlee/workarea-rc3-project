@@ -1,6 +1,0 @@
-\datatype = fitshdr
-| cntr |      ra     |     dec     |      cra     |     cdec     |naxis1|naxis2| ctype1 | ctype2 |     crpix1    |     crpix2    |    crval1   |    crval2   |      cdelt1     |      cdelt2     |   crota2    |equinox |    size    | hdu  | fname                         |
-| int  |    double   |    double   |      char    |    char      | int  | int  |  char  |  char  |     double    |     double    |    double   |    double   |      double     |      double     |   double    |  double|     int    | int  | char                          |
-      0   169.3440892    26.5180079 11h 17m 22.58s +26d 31m 04.8s    686    880 RA---TAN DEC--TAN       -25.00000       824.00000   169.4583300    26.6247200 -2.7777800000e-04  2.7777800000e-04     0.0000000  2000.00      4832640      0 hdu0_frame-u-005112-3-0388.fits 
-      1   169.5100262    26.5365162 11h 18m 02.41s +26d 32m 11.5s    687    879 RA---TAN DEC--TAN       510.00000       757.00000   169.4583300    26.6247200 -2.7777800000e-04  2.7777800000e-04     0.0000000  2000.00      4835520      0 hdu0_frame-u-005112-3-0389.fits 
-      2   169.6761715    26.5549710 11h 18m 42.28s +26d 33m 17.9s    687    879 RA---TAN DEC--TAN      1045.00000       690.00000   169.4583300    26.6247200 -2.7777800000e-04  2.7777800000e-04     0.0000000  2000.00      4835520      0 hdu0_frame-u-005112-3-0390.fits 
