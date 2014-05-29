@@ -4,10 +4,10 @@ import shutil
 
 DEBUG = True
 CUTOFF =False 
-run=5112
+run=1412
 camcol=3
-field=389
-
+field=96
+	
 ra=158.147083333   
 dec= 65.041
 radius= 1.20226443462
