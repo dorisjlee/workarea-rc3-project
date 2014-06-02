@@ -3,7 +3,7 @@
 <VOTABLE version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.2">
 <DESCRIPTION>produced by STIFF</DESCRIPTION>
 <!-- VOTable description at http://www.ivoa.net/Documents/VOTable/ -->
-<RESOURCE ID="STIFF" name="0_28_COLORSAT_5_MAX_MAN_3">
+<RESOURCE ID="STIFF" name="193_26_COLORSAT_5_MAX_MAN_3">
  <DESCRIPTION>Data related to STIFF</DESCRIPTION>
  <INFO name="QUERY_STATUS" value="OK" />
  <COOSYS ID="J2000" equinox="J2000" epoch="2000.0" system="ICRS"/>
@@ -17,12 +17,12 @@
   <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
   <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="4"/>
   <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2014-06-01"/>
-  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="20:57:51"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="23:15:43"/>
   <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0" unit="s"/>
   <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="doris"/>
   <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="Doriss-MacBook-Pro.local"/>
   <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/Users/doris/Desktop/GSoC2014/workarea-rc3-project/stiff_test"/>
-  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="0_28_COLORSAT_5_MAX_MAN_3"/>
+  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="193_26_COLORSAT_5_MAX_MAN_3"/>
   <TABLE ID="Input_Image_Data" name="Input_Image_Data">
    <DESCRIPTION>Data gathered by STIFF for every FITS input image</DESCRIPTION>
    <!-- NChannels may be 0 if an error occurred early in the processing -->
@@ -38,16 +38,16 @@
    <FIELD name="Level_Max" datatype="float" ucd="phot.flux.sb;obs.image;stat.max" unit="adu"/>
    <DATA><TABLEDATA>
     <TR>
-     <TD>1</TD><TD>SDSS_frame-i-004135-3-0282.fits</TD><TD>no ident</TD>
-     <TD>181 181</TD><TD>0.0150186</TD><TD>0.0120306</TD><TD>3</TD>
+     <TD>1</TD><TD>SDSS_frame-i-005087-2-0266.fits</TD><TD>no ident</TD>
+     <TD>181 181</TD><TD>0.0130088</TD><TD>0.0100189</TD><TD>3</TD>
     </TR>
     <TR>
-     <TD>2</TD><TD>SDSS_frame-r-004135-3-0282.fits</TD><TD>no ident</TD>
-     <TD>181 181</TD><TD>0.00946712</TD><TD>0.0064736</TD><TD>3</TD>
+     <TD>2</TD><TD>SDSS_frame-r-005087-2-0266.fits</TD><TD>no ident</TD>
+     <TD>181 181</TD><TD>0.00407853</TD><TD>0.00107961</TD><TD>3</TD>
     </TR>
     <TR>
-     <TD>3</TD><TD>SDSS_frame-g-004135-3-0282.fits</TD><TD>no ident</TD>
-     <TD>181 181</TD><TD>0.0032624</TD><TD>0.00026266</TD><TD>3</TD>
+     <TD>3</TD><TD>SDSS_frame-g-005087-2-0266.fits</TD><TD>no ident</TD>
+     <TD>181 181</TD><TD>0.00302615</TD><TD>2.61768e-05</TD><TD>3</TD>
     </TR>
    </TABLEDATA></DATA>
   </TABLE>
@@ -57,14 +57,14 @@
    <FIELD name="Time" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
    <FIELD name="Msg" datatype="char" arraysize="*" ucd="meta"/>
    <DATA><TABLEDATA>
-    <TR><TD>2014-06-01</TD><TD>20:57:51</TD><TD>stiff.conf not found, using internal defaults</TD></TR>
+    <TR><TD>2014-06-01</TD><TD>23:15:43</TD><TD>stiff.conf not found, using internal defaults</TD></TR>
    </TABLEDATA></DATA>
   </TABLE>
   <RESOURCE ID="Config" name="Config">
    <DESCRIPTION>STIFF configuration</DESCRIPTION>
-   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="stiff SDSS_frame-i-004135-3-0282.fits SDSS_frame-r-004135-3-0282.fits SDSS_frame-g-004135-3-0282.fits -c stiff.conf -OUTFILE_NAME 0_28_COLORSAT_5_MAX_MAN_3 -COLOUR_SAT 5 -MAX_TYPE MANUAL -MAX_LEVEL 3"/>
+   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="stiff SDSS_frame-i-005087-2-0266.fits SDSS_frame-r-005087-2-0266.fits SDSS_frame-g-005087-2-0266.fits -c stiff.conf -OUTFILE_NAME 193_26_COLORSAT_5_MAX_MAN_3 -COLOUR_SAT 5 -MAX_TYPE MANUAL -MAX_LEVEL 3"/>
    <PARAM name="Prefs_Name" datatype="char" arraysize="*" ucd="obs.param;meta.file" value="stiff.conf"/>
-   <PARAM name="OutFile_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="0_28_COLORSAT_5_MAX_MAN_3"/>
+   <PARAM name="OutFile_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="193_26_COLORSAT_5_MAX_MAN_3"/>
    <PARAM name="Image_Type" datatype="char" arraysize="*" ucd="meta.code;meta.file" value="AUTO"/>
    <PARAM name="Bits_Per_Channel" datatype="int" ucd="meta.number" value="8"/>
    <PARAM name="BigTIFF_Type" datatype="char" arraysize="*" ucd="meta.code;meta.file" value="AUTO"/>

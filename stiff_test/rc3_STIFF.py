@@ -5,13 +5,13 @@ from math import floor
 DEBUG = True
 CUTOFF =False 
 
-run=7754
-camcol=6
-field=315
-        
-ra=0.25	
-dec= 6.22833333333
-radius= 1.04712854805
+run=5087
+camcol=2
+field=266
+
+ra= 193.472083333 
+dec=26.4438888889
+radius=  2.45470891569
 
 bands=['u','g','r','i','z']
 for ele in bands:
@@ -58,9 +58,10 @@ for ele in bands:
 #         -blue SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ " 2s max gaussian-log \
 #         -out "+str(floor(ra))+"_"+str(floor(dec))+"_tcolor_10_min1s_max_final.jpg")
 # Using STIFF 
-os.system("stiff "+" SDSS_frame-"+"i"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits "+ " SDSS_frame-"+"r"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ " SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ "  -c stiff.conf  " +"  -OUTFILE_NAME  "+str(floor(ra))+"_"+str(floor(dec))+"_COLORSAT_1_MAX_MAN_3  -COLOUR_SAT  1 -MAX_TYPE MANUAL -MAX_LEVEL 3")
-for b in bands:
-	os.system("rm -r "+b+"/")
+
+os.system("stiff "+" SDSS_frame-"+"i"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits "+ " SDSS_frame-"+"r"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ " SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ "  -c stiff.conf  " +"  -OUTFILE_NAME  "+str(floor(ra))+"_"+str(floor(dec))+"_COLORSAT_5_MAX_MAN_3  -COLOUR_SAT  5 -MAX_TYPE MANUAL -MAX_LEVEL 3")
+#for b in bands:
+	#os.system("rm -r "+b+"/")
 	#we want to keep the fit files, but for testing purposes Python will throw file-already-exist error , if we dont delete them.
 	#os.system("rm -r " + "SDSS_frame-"+b+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits" )
 if (DEBUG) : print ("Completed Mosaic")
