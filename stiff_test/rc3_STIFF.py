@@ -5,14 +5,13 @@ from math import floor
 DEBUG = True
 CUTOFF =False 
 
-run=5112
-camcol=3
-field=389
-
-
-ra=169.458333333     
-dec= 26.6247222222
-radius= 1.20226443462
+run=7754
+camcol=6
+field=315
+        
+ra=0.25	
+dec= 6.22833333333
+radius= 1.04712854805
 
 bands=['u','g','r','i','z']
 for ele in bands:
@@ -48,18 +47,20 @@ for ele in bands:
 	#mAdd coadds the reprojected images using the FITS header template and mImgtbl list.
 	os.chdir("projected")
 	montage.mAdd("../pimages.tbl","../"+out+".hdr","SDSS_"+out+".fits")
-	montage.mSubimage("SDSS_"+out+".fits","SDSS_"+out+"cropped.fits",ra,dec,0.05)
-	shutil.move("SDSS_"+out+"cropped.fits",os.getcwd()[:-11] )#if change to :-11 then move out of u,g,r,i,z directory, may be more convenient for mJPEG
+	montage.mSubimage("SDSS_"+out+".fits","SDSS_"+out+".fits",ra,dec,0.05)
+	shutil.move("SDSS_"+out+".fits",os.getcwd()[:-11] )#if change to :-11 then move out of u,g,r,i,z directory, may be more convenient for mJPEG
 	if (DEBUG) : print ("Completed Mosaic for " + band)
 	os.chdir("../..")
 # Superimposing R,G,B image mosaics into JPEG
-os.system("mJPEG "+ " -t 20  \ "+ 
-		" -red "+ "SDSS_frame-"+"i"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ "cropped.fits "+ " 1s max gaussian-log \
-        -green  SDSS_frame-"+"r"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+"cropped.fits "+" 1s max gaussian-log \
-        -blue SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+"cropped.fits "+ " 2s max gaussian-log \
-        -out "+str(floor(ra))+"_"+str(floor(dec))+"_tcolor_10_min1s_max_final.jpg")
+# os.system("mJPEG "+ " -t 20  \ "+ 
+# 		" -red "+ "SDSS_frame-"+"i"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits "+ " 1s max gaussian-log \
+#         -green  SDSS_frame-"+"r"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+" 1s max gaussian-log \
+#         -blue SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ " 2s max gaussian-log \
+#         -out "+str(floor(ra))+"_"+str(floor(dec))+"_tcolor_10_min1s_max_final.jpg")
+# Using STIFF 
+os.system("stiff "+" SDSS_frame-"+"i"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits "+ " SDSS_frame-"+"r"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ " SDSS_frame-"+"g"+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+".fits "+ "  -c stiff.conf  " +"  -OUTFILE_NAME  "+str(floor(ra))+"_"+str(floor(dec))+"_COLORSAT_1_MAX_MAN_3  -COLOUR_SAT  1 -MAX_TYPE MANUAL -MAX_LEVEL 3")
 for b in bands:
 	os.system("rm -r "+b+"/")
 	#we want to keep the fit files, but for testing purposes Python will throw file-already-exist error , if we dont delete them.
-	os.system("rm -r " + "SDSS_frame-"+b+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ "cropped.fits" )
+	#os.system("rm -r " + "SDSS_frame-"+b+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits" )
 if (DEBUG) : print ("Completed Mosaic")
