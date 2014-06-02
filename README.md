@@ -14,3 +14,5 @@ Work area for rc3 catalog project
 - [5-25-2014_Questions and Summary](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/5-25-2014_Questions%20and%20Summary.ipynb)
 - [5-28-2014 Background Color Saturation Problem](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/05-28-2014%20Background%20and%20Color%20Saturation%20problem.ipynb)
 - [Color Saturation Results and Question](http://nbviewer.ipython.org/urls/raw.github.com/dorislee0309/workarea-rc3-project/master/notebooks/May2014notebooks/min_1_1_2_resulting_images2.ipynb)
+- [5-30-2014 Intro to STIFF](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/5-30-31-2014%20Installing%20and%20Using%20%20STIFF.ipynb)
+- [06-01-2014 Using STIFF for generating color images](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/2014-06-01%20Using%20STIFF%20for%20generating%20color%20images.ipynb)
