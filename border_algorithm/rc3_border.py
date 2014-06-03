@@ -11,7 +11,7 @@ field=266
 
 ra= 193.472083333 
 dec=26.4438888889
-radius=  2.45470891569
+radius =  0.0409118153432/2. #radius = diameter/2
 
 bands=['u','g','r','i','z']
 for ele in bands:
