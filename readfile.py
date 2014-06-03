@@ -1,5 +1,5 @@
 #Run in Python2 
-output =  open("rc3_formatted_csv.txt", "w")
+output =  open("rc3_ra_dec_only_csv(Corrected_Size).txt", "w")
 #output.write("ra          |")
 #output.write("dec          |")
 #output.write("radius          \n")
@@ -15,11 +15,14 @@ for line in file('rc3.txt'):
     if line[172]!= ' ' : #everything except blank line should have decimal point
         rad = 10**(float(line[171:175]))
         ra = 15*x + (y/4) + (z/240) #units of time 0-24 hr,=>degrees, every hour earth spins 15 deg  (4, 240 comes from expaned form from 3600)
-        radius = rad/10
+        diameter = rad*0.00166666667
+        #print ('diameter: '+str(diameter) + "\n")
     dec = decval + (m/60) + (n/3600)
     if sign == '-':
        dec = -1*dec 
-    output.write(str(ra)+ ",")
-    output.write(str(dec)+"\n")
-    #output.write(str(radius)+"\n")
+    output.write(str(ra)+ "     ")
+    # output.write(str(dec)+ "     ")
+    # output.write(str(diameter)+"\n")
+    output.write(str(dec)+ "\n")
+#    output.write(str(diameter)+"\n")
 output.close()
