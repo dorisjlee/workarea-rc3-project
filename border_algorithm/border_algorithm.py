@@ -5,11 +5,12 @@ import shutil
 #ra = ra exact (ra as left-right)
 #dec = dec exact (dec as spanning north-south)
 
-#ra_sdss = ra returned by sdss server , center of that particular run, camcol,field image 
-#dec_sdss
 ra= 193.472083333 
 dec=26.4438888889
 diameter=  0.0409118153432 
+
+#ra_sdss = ra returned by sdss server , center of that particular run, camcol,field image 
+#dec_sdss
 #units of degrees
 ra_sdss= 193.42842	
 dec_sdss = 26.50897
