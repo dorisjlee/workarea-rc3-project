@@ -16,3 +16,4 @@ Work area for rc3 catalog project
 - [Color Saturation Results and Question](http://nbviewer.ipython.org/urls/raw.github.com/dorislee0309/workarea-rc3-project/master/notebooks/May2014notebooks/min_1_1_2_resulting_images2.ipynb)
 - [5-30-2014 Intro to STIFF](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/5-30-31-2014%20Installing%20and%20Using%20%20STIFF.ipynb)
 - [06-01-2014 Using STIFF for generating color images](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/2014-06-01%20Using%20STIFF%20for%20generating%20color%20images.ipynb)
+- [06-02-2014 Identify Proper Radius and verified RA, DEC correctness] (http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-02-2014%20Identify%20proper%20radius%20and%20verified%20RA,DEC%20correctness.ipynb)
