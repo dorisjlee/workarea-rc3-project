@@ -1,5 +1,5 @@
 #Run in Python2 
-output =  open("rc3_ra_dec_radius_csv(Final).txt", "w")
+output =  open("rc3_ra_dec_only(Final).txt", "w")
 #output.write("ra          |")
 #output.write("dec          |")
 #output.write("radius          \n")
@@ -21,8 +21,8 @@ for line in file('rc3.txt'):
     if sign == '-':
        dec = -1*dec 
     output.write(str(ra)+ "     ")
-    output.write(str(dec)+ "     ")
-    output.write(str(diameter)+"\n")
-    # output.write(str(dec)+ "\n")
-#    output.write(str(diameter)+"\n")
+    #output.write(str(dec)+ "     ")
+    #output.write(str(diameter)+"\n")
+    output.write(str(dec)+ "\n")
+    #output.write(str(diameter)+"\n")
 output.close()
