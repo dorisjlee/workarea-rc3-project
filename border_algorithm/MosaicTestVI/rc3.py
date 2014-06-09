@@ -3,13 +3,14 @@ import os
 import shutil
 from math import trunc
 import sqlcl
+import sys
 #Must run in Python 2
 DEBUG = True
         
-                 
-ra= 239.31375          
-dec= 5.99833333333
-radius =  0.0135471752965  /2. #radius = diameter/2
+       
+ra= 22.9066666667         
+dec= 36.8333333333
+radius =  0.0191358937299 /2. #radius = diameter/2
 margin = 2*radius
 #margin = 10* radius  #radius + radius * 0.2
 # margin =0.05
@@ -27,11 +28,13 @@ for i in result:
         list[2]= list[2][:-1]
         data.append(list)
     count +=1
-if (DEBUG): 
-	print ( "Complete Query. These data lies within margin: ")
-	print (data)
-
-
+if len(data)==0:
+    if (DEBUG):print 'The given ra, dec of this galaxy does not lie in the SDSS footprint.'
+    sys.exit()
+else :
+    if (DEBUG): 
+        print ( "Complete Query. These data lies within margin: ")
+        print (data)
 bands=['u','g','r','i','z']
 for ele in bands:
     band =ele
