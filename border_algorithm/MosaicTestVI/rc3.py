@@ -7,11 +7,11 @@ import sys
 #Must run in Python 2
 DEBUG = True
         
-       
-ra= 22.9066666667         
-dec= 36.8333333333
-radius =  0.0191358937299 /2. #radius = diameter/2
-margin = 2*radius
+                          
+ra= 159.692083333 
+dec=53.5022222222
+radius =     0.0515049239782 /2. #radius = diameter/2
+margin = 3*radius
 #margin = 10* radius  #radius + radius * 0.2
 # margin =0.05
 #This is proper margin, but for multiple entries we are using margin =0.5 as test
@@ -29,7 +29,7 @@ for i in result:
         data.append(list)
     count +=1
 if len(data)==0:
-    if (DEBUG):print 'The given ra, dec of this galaxy does not lie in the SDSS footprint.'
+    if (DEBUG):print 'The given ra, dec of this galaxy does not lie in the SDSS footprint. Exit Program.'
     sys.exit()
 else :
     if (DEBUG): 
@@ -68,9 +68,9 @@ for ele in bands:
     if (DEBUG) : print ("Completed Mosaic for " + band)
     os.chdir("../..")
 # Superimposing R,G,B image mosaics into TIFF using STIFF
-os.system("stiff "+" SDSS_i_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+ " SDSS_r_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+" SDSS_g_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+ "  -c stiff.conf  " +"  -OUTFILE_NAME  MARGIN_2rad_deg_"+str(trunc(ra))+"_"+str(trunc(dec))+"_COLORSAT_2_MAX_MAN_3.tiff   -COLOUR_SAT  2 -MAX_TYPE MANUAL -MAX_LEVEL 3")
-# for b in bands:
-# 	os.system("rm -r "+b+"/")
+os.system("stiff "+" SDSS_i_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+ " SDSS_r_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+" SDSS_g_"+str(trunc(ra))+"_"+str(trunc(dec))+ ".fits "+ "  -c stiff.conf  " +"  -OUTFILE_NAME  MARGIN_2rad_deg_"+str(trunc(ra))+"_"+str(trunc(dec))+"_COLORSAT_2_MAX_MAN_5.tiff   -COLOUR_SAT  2 -MAX_TYPE MANUAL -MAX_LEVEL 5")
+for b in bands:
+    os.system("rm -r "+b+"/")
 	#we want to keep the fit files, but for testing purposes Python will throw file-already-exist error , if we dont delete them.
 	#os.system("rm -r " + "SDSS_frame-"+b+"-"+str(run).zfill(6)+"-"+str(camcol)+"-"+str(field).zfill(4)+ ".fits" )
 if (DEBUG) : print ("Completed Mosaic")
