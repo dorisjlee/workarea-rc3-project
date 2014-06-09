@@ -3,7 +3,7 @@
 <VOTABLE version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.2">
 <DESCRIPTION>produced by STIFF</DESCRIPTION>
 <!-- VOTable description at http://www.ivoa.net/Documents/VOTable/ -->
-<RESOURCE ID="STIFF" name="4_6_COLORSAT_5_MAX_MAN_3">
+<RESOURCE ID="STIFF" name="stiff.tif">
  <DESCRIPTION>Data related to STIFF</DESCRIPTION>
  <INFO name="QUERY_STATUS" value="OK" />
  <COOSYS ID="J2000" equinox="J2000" epoch="2000.0" system="ICRS"/>
@@ -17,12 +17,12 @@
   <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
   <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="4"/>
   <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2014-06-06"/>
-  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="15:56:52"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="17:56:54"/>
   <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0" unit="s"/>
   <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="doris"/>
-  <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="airbears2-10-142-0-164.airbears2.1918.berkeley.edu"/>
+  <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="Doriss-MacBook-Pro.local"/>
   <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/Users/doris/Desktop/GSoC2014/workarea-rc3-project/border_algorithm/MosaicTest"/>
-  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="4_6_COLORSAT_5_MAX_MAN_3"/>
+  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="stiff.tif"/>
   <TABLE ID="Input_Image_Data" name="Input_Image_Data">
    <DESCRIPTION>Data gathered by STIFF for every FITS input image</DESCRIPTION>
    <!-- NChannels may be 0 if an error occurred early in the processing -->
@@ -39,15 +39,15 @@
    <DATA><TABLEDATA>
     <TR>
      <TD>1</TD><TD>SDSS_i_4_6.fits</TD><TD>no ident</TD>
-     <TD>30 30</TD><TD>0.164113</TD><TD>0.161274</TD><TD>3</TD>
+     <TD>30 30</TD><TD>0.164113</TD><TD>0.153405</TD><TD>10.8611</TD>
     </TR>
     <TR>
      <TD>2</TD><TD>SDSS_r_4_6.fits</TD><TD>no ident</TD>
-     <TD>30 30</TD><TD>0.137179</TD><TD>0.134313</TD><TD>3</TD>
+     <TD>30 30</TD><TD>0.137179</TD><TD>0.133002</TD><TD>4.30968</TD>
     </TR>
     <TR>
      <TD>3</TD><TD>SDSS_g_4_6.fits</TD><TD>no ident</TD>
-     <TD>30 30</TD><TD>0.103241</TD><TD>0.100341</TD><TD>3</TD>
+     <TD>30 30</TD><TD>0.103241</TD><TD>0.102222</TD><TD>1.12118</TD>
     </TR>
    </TABLEDATA></DATA>
   </TABLE>
@@ -57,14 +57,14 @@
    <FIELD name="Time" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
    <FIELD name="Msg" datatype="char" arraysize="*" ucd="meta"/>
    <DATA><TABLEDATA>
-    <TR><TD>2014-06-06</TD><TD>15:56:52</TD><TD>stiff.conf not found, using internal defaults</TD></TR>
+    <TR><TD>2014-06-06</TD><TD>17:56:54</TD><TD>stiff.conf not found, using internal defaults</TD></TR>
    </TABLEDATA></DATA>
   </TABLE>
   <RESOURCE ID="Config" name="Config">
    <DESCRIPTION>STIFF configuration</DESCRIPTION>
-   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="stiff SDSS_i_4_6.fits SDSS_r_4_6.fits SDSS_g_4_6.fits -c stiff.conf -OUTFILE_NAME 4_6_COLORSAT_5_MAX_MAN_3 -COLOUR_SAT 5 -MAX_TYPE MANUAL -MAX_LEVEL 3"/>
+   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="stiff SDSS_i_4_6.fits SDSS_r_4_6.fits SDSS_g_4_6.fits"/>
    <PARAM name="Prefs_Name" datatype="char" arraysize="*" ucd="obs.param;meta.file" value="stiff.conf"/>
-   <PARAM name="OutFile_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="4_6_COLORSAT_5_MAX_MAN_3"/>
+   <PARAM name="OutFile_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="stiff.tif"/>
    <PARAM name="Image_Type" datatype="char" arraysize="*" ucd="meta.code;meta.file" value="AUTO"/>
    <PARAM name="Bits_Per_Channel" datatype="int" ucd="meta.number" value="8"/>
    <PARAM name="BigTIFF_Type" datatype="char" arraysize="*" ucd="meta.code;meta.file" value="AUTO"/>
@@ -78,12 +78,12 @@
    <PARAM name="Sky_Level" unit="adu" datatype="double" arraysize="3" ucd="instr.skyLevel;stat.median;obs.param" value="0 0 0"/>
    <PARAM name="Min_Type" datatype="char" arraysize="*" ucd="meta.code;stat.min" value="GREYLEVEL,GREYLEVEL,GREYLEVEL"/>
    <PARAM name="Min_Level" unit="adu" datatype="double" arraysize="3" ucd="phot.flux.sb;stat.min;obs.param" value="0.001 0.001 0.001"/>
-   <PARAM name="Max_Type" datatype="char" arraysize="*" ucd="meta.code;stat.max" value="MANUAL,MANUAL,MANUAL"/>
-   <PARAM name="Max_Level" unit="adu" datatype="double" arraysize="3" ucd="phot.flux.sb;stat.max;obs.param" value="3 3 3"/>
+   <PARAM name="Max_Type" datatype="char" arraysize="*" ucd="meta.code;stat.max" value="QUANTILE,QUANTILE,QUANTILE"/>
+   <PARAM name="Max_Level" unit="adu" datatype="double" arraysize="3" ucd="phot.flux.sb;stat.max;obs.param" value="0.999 0.999 0.999"/>
    <PARAM name="Satur_Level" unit="adu" datatype="double" arraysize="1" ucd="instr.saturation;obs.param" value="40000"/>
    <PARAM name="Gamma" datatype="double" ucd="arith.factor" value="2.2"/>
    <PARAM name="Gamma_Fac" datatype="double" ucd="arith.factor" value="1"/>
-   <PARAM name="Colour_Sat" datatype="double" ucd="arith.factor" value="5"/>
+   <PARAM name="Colour_Sat" datatype="double" ucd="arith.factor" value="1"/>
    <PARAM name="Negative" datatype="boolean" ucd="meta.code" value="F"/>
    <PARAM name="VMem_Dir" datatype="char" arraysize="*" ucd="meta" value="."/>
    <PARAM name="VMem_Max" unit="Mbyte" datatype="int" ucd="meta.number;stat.max" value="1048576"/>
