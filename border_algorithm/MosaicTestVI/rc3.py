@@ -7,10 +7,10 @@ import sys
 #Must run in Python 2
 DEBUG = True
         
-                          
-ra= 159.692083333 
-dec=53.5022222222
-radius =     0.0515049239782 /2. #radius = diameter/2
+                
+ra= 7.32666666667                 
+dec=2.86972222222
+radius =   0.0112680496124 /2. #radius = diameter/2
 margin = 3*radius
 #margin = 10* radius  #radius + radius * 0.2
 # margin =0.05
