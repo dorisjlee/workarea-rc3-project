@@ -2,12 +2,12 @@
 #   2 FLUX_RADIUS     Fraction-of-light radii                         [pixel]
 #   3 ALPHA_J2000     Right ascension of barycenter (J2000)           [deg]
 #   4 DELTA_J2000     Declination of barycenter (J2000)               [deg]
-         1      5.956   0.2674770  +4.4999796
-         2      1.016   0.2516224  +4.5000342
-         3      2.426   0.2679100  +4.5287791
-         4      1.161   0.2409163  +4.5302994
-         5      1.359   0.2354577  +4.5240668
-         6      1.158   0.2605254  +4.5179037
-         7      1.419   0.2662611  +4.5083174
-         8      1.740   0.2402489  +4.5074501
-         9      1.226   0.2342048  +4.5290889
+#   5 XMIN_IMAGE      Minimum x-coordinate among detected pixels      [pixel]
+#   6 YMIN_IMAGE      Minimum y-coordinate among detected pixels      [pixel]
+#   7 XMAX_IMAGE      Maximum x-coordinate among detected pixels      [pixel]
+#   8 YMAX_IMAGE      Maximum y-coordinate among detected pixels      [pixel]
+#   9 A_IMAGE         Profile RMS along major axis                    [pixel]
+#  10 B_IMAGE         Profile RMS along minor axis                    [pixel]
+         1      9.457   3.1998044 +22.0235598          1          4         73         62    10.592     5.951
+         2      0.926   3.1921131 +22.0158869         65          9         70         14     1.037     1.030
+         3      0.952   3.2028410 +22.0341743         31         76         33         78     0.766     0.731
