@@ -43,9 +43,9 @@ class rc3:
         print (result)
         print (clean_result)
         if (result[0][5:]=="<html>"):
-	    print("strange error from SQL server")
-	    return -1
-	if (result[1]=='error_message\n' or clean_result[1]=='error_message\n'):
+            print("strange error from SQL server")
+            return -1
+        if (result[1]=='error_message\n' or clean_result[1]=='error_message\n'):
     	    #Case where doing more than 60 queries in 1 minute
             time.sleep(60)
             #results are messed up, need to re-query
@@ -81,7 +81,7 @@ class rc3:
         # os.chdir(filename)
         #if (os.path.exists(band)):
 	    #os.system("rm -r "+band)
-	os.mkdir(band)
+        os.mkdir(band)
         os.chdir(band)
         os.mkdir ("raw")
         os.mkdir ("projected")
@@ -103,8 +103,8 @@ class rc3:
             montage.mSubimage(out+".fits",outfile,ra,dec,2*margin) # mSubImage takes xsize which should be twice the margin (margin measures center to edge of image)
             #os.chdir("../..")
             hdulist = pyfits.open(outfile)
-	    shutil.move(outfile,"../..")
-	    os.chdir("../..")
+            shutil.move(outfile,"../..")
+            os.chdir("../..")
         else:
             montage.mImgtbl("raw","images.tbl")
             montage.mHdr(str(ra)+" "+str(dec),margin,out+".hdr")
@@ -133,10 +133,10 @@ class rc3:
         #if (os.path.exists(outfile)):
             #os.system("rm "+ outfile)
         hdulist.writeto(outfile)
-        #if (os.path.exists(outfile_r)):
-            #os.system("rm "+outfile_r)
+        if (os.path.exists(outfile_r)):
+            os.system("rm "+outfile_r)
         #print("Deleting")
-	os.system("rm -r "+band+"/")
+        os.system("rm -r "+band+"/")
         print ("Completed Mosaic")
         return outfile 
 
@@ -464,7 +464,7 @@ if __name__ == "__main__":
 	# 	sconf_obj = rc3(0.184583333333,28.4013888889,0.0132388039385,58)
 	# 	mosaic_example(sconf_obj)
 	###################################
-    initial_run()
+    # initial_run()
     ##################################
     # os.chdir("..")
     # rfits=[file for root, dir, files in os.walk("final_run_info") for file in files if fnmatch.fnmatchcase(file, "SDSS_r_*.fits")]
@@ -491,5 +491,41 @@ if __name__ == "__main__":
     #         error.write("{}       {}        {}        {} \n".format(rc3_obj.rc3_ra,rc3_obj.rc3_dec,rc3_obj.rc3_radius,rc3_obj.pgc))
     #     # If you trust recursion, you will magically get the final updated value here
     #     print ("Final updated params : "+str(info))
+
+    #########################################################################################################
+    n = 0
+    start=False
+    # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
+    #unclean = open("rc3_galaxies_unclean","a")
+    with open("rc3_ra_dec_diameter_pgc.txt",'r') as f:
+        for line in f:
+            #try:
+            #print (line)
+            a = str(line)[0]
+            #Debugging purpose, put this in the rc3(final).txt to start from where you left off (when error)
+            if a[0] =="@": 
+                start=True
+                print ("Now start")
+                continue
+            if (start):
+                n +=1
+                ra = float(line.split()[0])
+                dec = float(line.split()[1])
+                radius = float(line.split()[2])/2. #radius = diameter/2
+                pgc=str(line.split()[3]).replace(' ', '')
+                clean=True
+                # filename = "{},{}".format(str(ra),str(dec))
+                filename = str(ra)+str(dec)
+                #print ("Working on {}th RC3 Galaxy at {}".format(str(n),filename))
+                # Run mosaic on r band with all original rc3 catalog values
+                obj= rc3(ra,dec,radius,pgc)
+                rfits=obj.mosaic_band('r',ra,dec,3*radius,radius,pgc)
+                if(rfits!=-1): #Special value for outside footprint or error , no rfits produced
+                    obj.source_info(rfits)
+            #except :
+                #print("Something went wrong when mosaicing PGC"+str(pgc)+", just ignore it and keep mosaicing the next galaxy")
+                #error = open ("sourceinfo_error.txt","a")
+                #error.write(str(ra)+"        "+str(dec)+"        "+str(radius)+"        "+str(pgc))
+                #continue
 
 
