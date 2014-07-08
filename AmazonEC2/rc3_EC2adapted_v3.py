@@ -29,8 +29,8 @@ class rc3:
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
-        unclean = open("rc3_galaxies_unclean","a")
+        # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
+        # unclean = open("rc3_galaxies_unclean","a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
         #print (margin/radius)
@@ -394,47 +394,47 @@ class rc3:
         shutil.move("SDSS_r_{0}_{1}.fits".format(str(self.rc3_ra),str(self.rc3_dec)),"../finished_rfits")
         print ("Completed Mosaic")
         
-#Unit Tested : Sucess
-def initial_run ():
-    '''
-    Input : void
-    Create r mosaic_band fit files for source_info to work on 
-    initial_run should only be ran once at the begining of the program
-    Output: r band mosaic fits for all galaxies below '@' inside rc3_ra_dec_diameter_pgc.txt
-    Return: void
-    '''
-    print ("------------------initial_run----------------------")
-    n = 0
-    start=False
-    # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
-    #unclean = open("rc3_galaxies_unclean","a")
-    with open("rc3_ra_dec_diameter_pgc.txt",'r') as f:
-        for line in f:
-            #try:
-                #print (line)
-                a = str(line)[0]
-                if a[0] =="@": #Debugging purpose, put this in the rc3(final).txt to start from where you left off (when error)
-                    start=True
-                    print ("Now start")
-                    continue
-                if (start):
-                    n +=1
-                    ra = float(line.split()[0])
-                    dec = float(line.split()[1])
-                    radius = float(line.split()[2])/2. #radius = diameter/2
-                    pgc=str(line.split()[3]).replace(' ', '')
-                    clean=True
-                    # filename = "{},{}".format(str(ra),str(dec))
-                    filename = str(ra)+str(dec)
-                    #print ("Working on {}th RC3 Galaxy at {}".format(str(n),filename))
-                    # Run mosaic on r band with all original rc3 catalog values
-                    obj= rc3(ra,dec,radius,pgc)
-                    obj.mosaic_band('r',ra,dec,3*radius,radius,pgc)
-            #except :
-                #print("Something went wrong when mosaicing PGC"+str(pgc)+", just ignore it and keep mosaicing the next galaxy")
-                #error = open ("sourceinfo_error.txt","a")
-                #error.write(str(ra)+"        "+str(dec)+"        "+str(radius)+"        "+str(pgc))
-                #continue
+# #Unit Tested : Sucess
+# def initial_run ():
+#     '''
+#     Input : void
+#     Create r mosaic_band fit files for source_info to work on 
+#     initial_run should only be ran once at the begining of the program
+#     Output: r band mosaic fits for all galaxies below '@' inside rc3_ra_dec_diameter_pgc.txt
+#     Return: void
+#     '''
+#     print ("------------------initial_run----------------------")
+#     n = 0
+#     start=False
+#     # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
+#     #unclean = open("rc3_galaxies_unclean","a")
+#     with open("rc3_ra_dec_diameter_pgc.txt",'r') as f:
+#         for line in f:
+#             #try:
+#                 #print (line)
+#                 a = str(line)[0]
+#                 if a[0] =="@": #Debugging purpose, put this in the rc3(final).txt to start from where you left off (when error)
+#                     start=True
+#                     print ("Now start")
+#                     continue
+#                 if (start):
+#                     n +=1
+#                     ra = float(line.split()[0])
+#                     dec = float(line.split()[1])
+#                     radius = float(line.split()[2])/2. #radius = diameter/2
+#                     pgc=str(line.split()[3]).replace(' ', '')
+#                     clean=True
+#                     # filename = "{},{}".format(str(ra),str(dec))
+#                     filename = str(ra)+str(dec)
+#                     #print ("Working on {}th RC3 Galaxy at {}".format(str(n),filename))
+#                     # Run mosaic on r band with all original rc3 catalog values
+#                     obj= rc3(ra,dec,radius,pgc)
+#                     obj.mosaic_band('r',ra,dec,3*radius,radius,pgc)
+#             #except :
+#                 #print("Something went wrong when mosaicing PGC"+str(pgc)+", just ignore it and keep mosaicing the next galaxy")
+#                 #error = open ("sourceinfo_error.txt","a")
+#                 #error.write(str(ra)+"        "+str(dec)+"        "+str(radius)+"        "+str(pgc))
+#                 #continue
 
 def mosaic_example(rc3_obj):
 	#Single example used for testing purposes so that we don't have to run the whole loop every time	
@@ -495,8 +495,8 @@ if __name__ == "__main__":
     #########################################################################################################
     n = 0
     start=False
-    # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
-    #unclean = open("rc3_galaxies_unclean","a")
+    output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
+    unclean = open("rc3_galaxies_unclean","a")
     with open("rc3_ra_dec_diameter_pgc.txt",'r') as f:
         for line in f:
             #try:

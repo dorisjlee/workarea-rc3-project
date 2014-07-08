@@ -136,7 +136,7 @@ class rc3:
         if (os.path.exists(outfile_r)):
             os.system("rm "+outfile_r)
         print("Deleting")
-	os.system("rm -r "+band+"/")
+	    os.system("rm -r "+band+"/")
         print ("Completed Mosaic")
         return outfile 
 
