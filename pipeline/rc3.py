@@ -13,7 +13,7 @@ import time
 # Assume you are inside directory (rfits/) where you have pulled all the g band fit files 
 # find . -name "SDSS_r_*.fits" -type f -exec cp {} ./rfits \; 
 
-class rc3:
+class rc3(Catalog):
     def __init__(self, rc3_ra, rc3_dec,rc3_radius,pgc, num_iterations=0):
         # initial rc3 ra ,dec,margin should be passed in as a attribute to the object
         self.rc3_ra = rc3_ra
@@ -22,7 +22,7 @@ class rc3:
         self.pgc = int(pgc)        
         self.num_iterations = num_iterations
 
-    def mosaic_band(self,band,ra,dec,margin,radius,pgc):#,clean=True):
+    def mosaic_band(self,band,ra,dec,margin,radius,pgc,survey):#,clean=True):
         '''
         Input: source info param
         Create a mosaic fit file for the specified band.
@@ -143,7 +143,7 @@ class rc3:
         print ("Completed Mosaic")
         return outfile 
 
-    def source_info(self,r_fits_filename):
+    def source_info(self,r_fits_filename,survey):
         '''
         [ra,dec,margin,radius,pgc] ==> Is margin info necessary(?) YES
         Input: Filename String of R band Mosaic fit file
@@ -151,6 +151,10 @@ class rc3:
         If no RC3 source is identified then ['@','@',margin_value,'@','@'] is returned
         If RC3 lie outside of SDSS footprint then [-1,-1,-1,-1,-1] is returned
         '''
+        #Create a survey object (generic)
+        s = Survey(survey)
+        # Get a l
+        survey_info = s.get_survey_info()
         try:
             updated = open("rc3_updated.txt",'a') 
             self.num_iterations +=1
@@ -371,7 +375,7 @@ class rc3:
             return['x','x','x','x','x']
             
     #Unit Tested : Sucess
-    def mosaic_all_bands(self,ra,dec,margin,radius,pgc):
+    def mosaic_all_bands(self,ra,dec,margin,radius,pgc,survey):
         '''
         Input
         Creates u,g,r,i,z fit file mosaic and g,r,i color images.
@@ -396,48 +400,7 @@ class rc3:
         # Move the finished rfit files outside so that, if terminate during the program, easier to recongnize which is already done and which is not.
         shutil.move("SDSS_r_{0}_{1}.fits".format(str(self.rc3_ra),str(self.rc3_dec)),"../finished_rfits")
         print ("Completed Mosaic")
-        
-# #Unit Tested : Sucess
-# def initial_run ():
-#     '''
-#     Input : void
-#     Create r mosaic_band fit files for source_info to work on 
-#     initial_run should only be ran once at the begining of the program
-#     Output: r band mosaic fits for all galaxies below '@' inside rc3_ra_dec_diameter_pgc.txt
-#     Return: void
-#     '''
-#     print ("------------------initial_run----------------------")
-#     n = 0
-#     start=False
-#     # output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
-#     #unclean = open("rc3_galaxies_unclean","a")
-#     with open("rc3_ra_dec_diameter_pgc.txt",'r') as f:
-#         for line in f:
-#             #try:
-#                 #print (line)
-#                 a = str(line)[0]
-#                 if a[0] =="@": #Debugging purpose, put this in the rc3(final).txt to start from where you left off (when error)
-#                     start=True
-#                     print ("Now start")
-#                     continue
-#                 if (start):
-#                     n +=1
-#                     ra = float(line.split()[0])
-#                     dec = float(line.split()[1])
-#                     radius = float(line.split()[2])/2. #radius = diameter/2
-#                     pgc=str(line.split()[3]).replace(' ', '')
-#                     clean=True
-#                     # filename = "{},{}".format(str(ra),str(dec))
-#                     filename = str(ra)+str(dec)
-#                     #print ("Working on {}th RC3 Galaxy at {}".format(str(n),filename))
-#                     # Run mosaic on r band with all original rc3 catalog values
-#                     obj= rc3(ra,dec,radius,pgc)
-#                     obj.mosaic_band('r',ra,dec,3*radius,radius,pgc)
-#             #except :
-#                 #print("Something went wrong when mosaicing PGC"+str(pgc)+", just ignore it and keep mosaicing the next galaxy")
-#                 #error = open ("sourceinfo_error.txt","a")
-#                 #error.write(str(ra)+"        "+str(dec)+"        "+str(radius)+"        "+str(pgc))
-#                 #continue
+  
 
 def mosaic_example(rc3_obj):
 	#Single example used for testing purposes so that we don't have to run the whole loop every time	
@@ -458,44 +421,6 @@ if __name__ == "__main__":
     DEBUG = True
     updated = open("rc3_updated.txt",'a') # 'a' for append #'w')
     updated.write("ra       dec         new_ra      new_dec         radius \n")
-	# if (DEBUG) :
-	# 	# Data contain unclean images; r_fit = "SDSS_r_6.225_6.66027777778.fits"
-	# 	#unclean_obj = rc3(6.225,6.66027777778,0.0166666667,1566)
-	# 	#mosaic_example(unclean_obj)
-	# 	#Source Confusion example
-	# 	# No detection (if radius cut at > 15.)
-	# 	sconf_obj = rc3(0.184583333333,28.4013888889,0.0132388039385,58)
-	# 	mosaic_example(sconf_obj)
-	###################################
-    # initial_run()
-    ##################################
-    # os.chdir("..")
-    # rfits=[file for root, dir, files in os.walk("final_run_info") for file in files if fnmatch.fnmatchcase(file, "SDSS_r_*.fits")]
-    # os.chdir("final_run_info/")
-    # #print("rfits first 23: "+ str(rfits[:24]))
-    # for file in rfits:
-    #     print(file)
-    #     hdulist = pyfits.open(file)
-    #     rc3_ra= hdulist[0].header['RA']
-    #     rc3_dec= hdulist[0].header['DEC']
-    #     rc3_radius= hdulist[0].header['RADIUS']
-    #     pgc = hdulist[0].header['PGC']
-    #     margin = hdulist[0].header['MARGIN']
-    #     rc3_obj=rc3(rc3_ra,rc3_dec,rc3_radius,pgc)
-    #     # you feed in the r fit mosaic from the initial run and let the recursion in source_info run wild
-    #     try:
-    #         info = rc3_obj.source_info(file) 
-    #     except (IOError):
-    #         print ("File Not Found Error, if rfits is not found then mosaic an rfits")
-    #         rc3_obj.mosaic_band('r',rc3_obj.rc3_ra,rc3_obj.rc3_dec,3*rc3_obj.rc3_radius,rc3_obj.rc3_radius,rc3_obj.pgc)
-    #     except:
-    #         print("Something went wrong when mosaicing PGC{}, just ignore it and keep mosaicing the next galaxy".format(str(pgc)))
-    #         error = open ("sourceinfo_error.txt","a")
-    #         error.write("{}       {}        {}        {} \n".format(rc3_obj.rc3_ra,rc3_obj.rc3_dec,rc3_obj.rc3_radius,rc3_obj.pgc))
-    #     # If you trust recursion, you will magically get the final updated value here
-    #     print ("Final updated params : "+str(info))
-
-    #########################################################################################################
     n = 0
     start=False
     output = open("rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
