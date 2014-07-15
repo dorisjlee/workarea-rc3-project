@@ -39,7 +39,7 @@ class RC3(RC3Catalog):
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("../rc3_galaxies_outside_SDSS_footprint.txt",'a') # 'a' for append #'w')
+        output = open("../rc3_galaxies_outside_{}_footprint.txt".format(survey.name),'a') # 'a' for append #'w')
         unclean = open("../rc3_galaxies_unclean","a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
@@ -85,12 +85,12 @@ class RC3(RC3Catalog):
         # # print (data)
         # data=result
         if (len(result)==0 and band=='r'): #you will only evounter non-footprint galaxy inint run , because after that we just take the footprint gaalxy already mosaiced (init) from rfits
-            if (DEBUG): print ('The given ra, dec of this galaxy does not lie in the SDSS footprint. Onto the next galaxy!')#Exit Program.'
+            if (DEBUG): print ('The given ra, dec of this galaxy does not lie in the survey footprint. Onto the next galaxy!')#Exit Program.'
             output.write(str(ra)+ "     "+ str(dec)+"     "+str(radius)+"\n")
             # output.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),pgc))
             output.write(str(ra)+"     "+str(dec)+"     "+str(radius)+"     "+str(pgc))
             #sys.exit()
-            return -1 #special value reserved for not in SDSS footprint galaxies
+            return -1 #special value reserved for not in survey footprint galaxies
         else :
             if (DEBUG): 
                 print ( "Complete Query. These data lies within margin: ")
@@ -104,11 +104,14 @@ class RC3(RC3Catalog):
         os.mkdir ("raw")
         os.mkdir ("projected")
         os.chdir("raw")
-        if (DEBUG): print ("Retrieving data from SDSS SAS server for "+ band +"band")
+        if (DEBUG): print ("Retrieving data from server for "+ band +"band")
         for i in result :  
+            # out = "frame-"+str(band)+"-"+str(i[0]).zfill(6)+"-"+str(i[1])+"-"+str(i[2]).zfill(4)
+            survey.data_server.getData(band,str(i[0]), str(i[1]),str(i[2]))
+            # os.system("wget http://mirror.sdss3.org/sas/dr10/boss/photoObj/frames/301/"+str(i[0])+"/"+str(i[1])+"/"+out+".fits.bz2")
+            # os.system("bunzip2 "+out+".fits.bz2")
             out = "frame-"+str(band)+"-"+str(i[0]).zfill(6)+"-"+str(i[1])+"-"+str(i[2]).zfill(4)
-            os.system("wget http://mirror.sdss3.org/sas/dr10/boss/photoObj/frames/301/"+str(i[0])+"/"+str(i[1])+"/"+out+".fits.bz2")
-            os.system("bunzip2 "+out+".fits.bz2")
+
         os.chdir("../")
         if (DEBUG) : print("Creating mosaic for "+band+" band.")
         outfile_r="SDSS_"+band+"_"+str(ra)+"_"+str(dec)+"r.fits"
@@ -135,9 +138,7 @@ class RC3(RC3Catalog):
             montage.mImgtbl("projected","pimages.tbl")
             os.chdir("projected")
             montage.mAdd("../pimages.tbl","../"+out+".hdr","SDSS_"+out+".fits")
-            # outfile_r="SDSS_{}_{}_{}r.fits".format(band,str(ra),str(dec))
-            #outfile_r="SDSS_"+band+"_"+str(ra)+"_"+str(dec)+"r.fits"
-            montage.mSubimage("SDSS_"+out+".fits",outfile_r,ra,dec,2*margin) # mSubImage takes xsize which should be twice the margin (margin measures center to edge of image)
+            montage.mSubimage("{}_{}.fits".format(survey.name,out),outfile_r,ra,dec,2*margin) # mSubImage takes xsize which should be twice the margin (margin measures center to edge of image)
             shutil.move(outfile_r,os.getcwd()[:-11] )#if change to :-11 then move out of u,g,r,i,z directory, may be more convenient for mJPEG
             if (DEBUG) : print ("Completed Mosaic for " + band)
             os.chdir("../..")
@@ -166,7 +167,7 @@ class RC3(RC3Catalog):
         Input: Filename String of R band Mosaic fit file
         Returns the updated [ra,dec,margin,radius,pgc] info about the identified RC3 source as a list
         If no RC3 source is identified then ['@','@',margin_value,'@','@'] is returned
-        If RC3 lie outside of SDSS footprint then [-1,-1,-1,-1,-1] is returned
+        If RC3 lie outside of survey footprint then [-1,-1,-1,-1,-1] is returned
         '''
         #Create a survey object (generic)
         # s = Survey(survey)

@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator"
+        content=
+        "HTML Tidy for Solaris (vers 1 September 2005), see www.w3.org" />
+
+  <title>Atlas Summary: 150.425933 2.430235 eq</title>
+
+  <script type="text/javascript" src="/include/ga_incl.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen,projection" href="/style.css" />
+<link rel="stylesheet" type="text/css" media="print" href="/print_style.css" />
+<link rel="stylesheet" type="text/css" media="screen,projection" href="/ui.css" />
+<script type="text/javascript" src="/ui_verbose.js"></script>
+
+<!--[if lt IE 7]>
+<style type="text/css" media="screen, projection">
+#irsa-menu li
+{
+float: left;
+height: 1%;
+}
+#irsa-menu a
+{
+height: 1%;
+}
+</style>
+<![endif]-->
+</head>
+<body >
+
+<div id="irsa-banner"   style= "min-width:768px; min-height:95px"></div>
+<script type="text/javascript" language='javascript' src='/frontpage/frontpage.nocache.js'> </script>
+
+<div id="content">
+<!--   #include virtual="/include/sysnotice.html"  -->
+
+<!--load the firefly tools javascript -->
+<script type="text/javascript">
+    {
+        onFireflyLoaded= function() {
+            firefly.debug= true;
+
+            var external= firefly.getExternalViewer();
+            external.setDefaultParams({   "TitleOptions" : "FILE_NAME",
+                                          "ColorTable"   : "1",
+                                          "TitleFilenameModePfx" : "cutout",
+                                          "PreTitle"     : "Imaging",
+                                          "PostTitle"    :  "150.425933 2.430235 eq",
+					  "OverlayPosition"    :  "150.42593;+2.43024;EQ_J2000",
+                                          "RangeValues"  : firefly.serializeRangeValues("Sigma",-2,8,"Linear")  
+                                      }) ;
+            external.setTarget("_testWin");
+        }
+   }
+   
+</script>
+
+<script type="text/javascript" language='javascript' src='/fftools/fftools.nocache.js'></script>
+
+  <form method="get"
+        action="/cgi-bin/Atlas/nph-atlas">
+    <input type="hidden"
+          name="mission"
+          value="Imaging" /> <input type="hidden"
+          name="hdr_location"
+          value="/work/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001" /> <input type="hidden"
+          name="collection_desc"
+          value="Imaging" />
+
+    <center>
+      <table cellpadding="5"
+             border="1">
+        <tr>
+          <td colspan="3"
+              align="center"
+              bgcolor="#669999"><font size="+1"
+                color="#FFFFFF"><b>Collection: Imaging,
+                Object:</b> 150.425933 2.430235 eq</font></td>
+        </tr>
+
+        <tr>
+          <td colspan="3"
+              bgcolor="#D3D3D3">
+            <center>
+              <input type="image"
+                      name="region"
+                      src="/workspace/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001//region.jpg" /><br />
+              <font size="-1"><i>Your selected position (or click)
+              is marked by the <font color=
+              "#339933"><u>green</u></font> crosshairs.<br />
+              Click on above image to re-center, or fine tune your
+              Region Size and/or Coordinate below. See results
+              tables below for key to color overlays.</i></font>
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3"
+              bgcolor="#D3D3D3">
+            <center>
+              <table cellpadding="3"
+                     cellspacing="0">
+                <tr>
+                  <td bgcolor="#669999"><font color=
+                  "#FFFFFF">Coordinate/Object:</font></td>
+
+                  <td colspan="3"
+                      bgcolor="#EAEAEA"><input name="locstr"
+                         size="45"
+                         maxlength="80"
+                         value=
+                         "10h 01m 42.22s +02d 25m 48.8s Equ J2000" /><br /></td>
+                </tr>
+
+                <tr>
+                  <td bgcolor="#669999"><font color="#FFFFFF">Size
+                  (deg):<br />
+                  [maximum: 0.6 deg]<br />
+                  [minimum: varies, but<br />
+                   0.25 deg for ISSA<br />
+                   backgrounds]</font></td>
+
+                  <td bgcolor="#EAEAEA"><input type="hidden"
+                         name="searchregion"
+                         none /> <input type=
+                         "hidden"
+                         name="radius"
+                         size="12"
+                         maxlength="40"
+                         value="-0.5" /> <input name="regSize"
+                         size="12"
+                         maxlength="40"
+                         value="0.25" /></td>
+
+                  <td bgcolor="#EAEAEA"
+                      align="right">&nbsp;&nbsp;&nbsp;<input type=
+                      "checkbox"
+                         name="covers" 
+                         checked=&#34;checked&#34; /></td>
+
+                  <td bgcolor="#669999"><font color=
+                  "#FFFFFF">Images&nbsp;must&nbsp;cover&nbsp;coordinate</font></td>
+                </tr>
+              </table><br />
+
+              <table width="300"
+                     border="0">
+                <tr>
+                  <td colspan="2"
+                      align="center"><input type="submit"
+                         value="Submit" /></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"
+                      align="center"><input type="button"
+                         value="Back to Imaging Front Page"
+                         onclick=
+                         "parent.location='/data/SPITZER/Enhanced/Imaging/'" /></td>
+                </tr>
+              </table>
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="center"
+              bgcolor="#669999"><font size="-1"
+                color="#FFFFFF">10h 01m 42.22s&nbsp;+02d 25m 48.8s<br />
+          Equ&nbsp;J2000</font></td>
+
+          <td bgcolor="#EAEAEA">
+            <table>
+              <tr>
+                <td>Image&nbsp;Metadata:<br />
+                &nbsp;(<font color=
+                "#FF0033">red&nbsp;overlays</font>)&nbsp;<br />
+                [<a href="/data/SPITZER/Enhanced/Imaging/key_images.html">column
+                key</a>]</td>
+
+                <td align="center">
+                  <a href="/workspace/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001//images.tbl">
+		  <img src='/images/download.png' border='0' align='bottom' alt='Icon'></a>
+                </td>
+
+                <td><font size="-1">(88 images<br />
+                footprints)</font></td>
+
+              </tr>
+            </table>
+          </td>
+
+          <td bgcolor="#EAEAEA">
+            <table>
+              <tr>
+                <td><a href=
+                "/applications/Atlas/instructions.html#background">Background</a>&nbsp;<br />
+
+                Image:<br />
+                <font size="-1">(factor of 1.5
+                larger<br />
+                than search size)</font></td>
+
+                <td><a href=
+                "/workspace/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001//region.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></a></td>
+
+                <td align="right"><a href='javascript:firefly.getExternalViewer().plotURL(
+                "http://irsa.ipac.caltech.edu/%2Fworkspace%2FTMP_HQsHJt_24024%2FAtlas%2F150.425933_2.430235_eq_24024.v0001/region.fits")'><img src="/images/fftools-logo.png"
+		                       border="0" align="bottom" alt="Icon"></img></a>&nbsp;<br /><font size="-1"></font></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <p><center> <font size='+1'> <a href='/applications/DataTag/docs/instructions.html' target='help'>Data Tag</a> string for Publication: &nbsp;&nbsp;<font color='blue'> ADS/IRSA.Atlas#2014/0714/100819_24024 </font></font> </center> <p></p></p>
+
+      <p><font size="+1"><a href="/work/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001/wget_data.bat">Bulk Download Script</a> of all results using WGET
+  <a href="/applications/Atlas/instructions.html#multi_results"
+        target="help"><img src="/images/icons/help.gif"
+       border="0" align="bottom" alt="Instructions"></img></a></font></p>
+
+      <p><br /><center> <font size="+2"> Listing of Image Metadata Table Results </font><table border="1">
+<tr bgcolor="#c0c0c0" align="center"><td><b>Image Metadata Table</b></td><td><b>Count</b></td><td><b>Type</b></td><td><b>Column Key</b></td></tr>
+<tr><td><a href="/workspace/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001/science.tbl.html">science.tbl <br /> [rectangular <font color="red"><b>red</b></font> footprints] </td><td align="right">20</td><td align="right">Original</td><td align="right"><a href="/data/SPITZER/Enhanced/Imaging/key_images.html">Column Key</a></td>
+<tr><td><a href="/workspace/TMP_HQsHJt_24024/Atlas/150.425933_2.430235_eq_24024.v0001/ancillary.tbl.html">ancillary.tbl <br /> [rectangular <font color="red"><b>red</b></font> footprints] </td><td align="right">68</td><td align="right">Original</td><td align="right"><a href="/data/SPITZER/Enhanced/Imaging/key_images.html">Column Key</a></td>
+</table></p>
+
+      <p></p>
+
+      <center>
+        <font size="+2">Download Images (<font color=
+        "#FF0033">Overlays</font>)</font> [<a href=
+        "/data/SPITZER/Enhanced/Imaging/key_images.html">column key</a>] <table border="1">
+<tr bgcolor="#c0c0c0" align="center">
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#ra">ra</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#dec">dec</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#naxis1">naxis1</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#naxis2">naxis2</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#dataset">dataset</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#cutout">cutout</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#fname">fname</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#Cutout_Image">Cutout_Image</a></b></td>
+<td><b><a href="/data/SPITZER/Enhanced/Imaging//key_images.html#Entire_Image">Entire_Image</a></b></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.median_mosaic.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.3.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.3.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2740436</td><td>2.4507796</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.MIPS.1.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.MIPS.1.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.4.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.4.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.1.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.1.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.2737462</td><td>2.4604590</td><td>4548</td><td>4419</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/0/60095931-20/60095931.60095931-20.IRAC.2.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F0%2F60095931-20%2F60095931.60095931-20.IRAC.2.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.softsatmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.softsatmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.softsatmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.softsatmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.extmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.extmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.extmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.extmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.1.unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.1.unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.7747512</td><td>2.4504166</td><td>1120</td><td>1121</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.MIPS.1.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.MIPS.1.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.3.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.3.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.std.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.std.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.2.std.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.2.std.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic_unc.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic_unc.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.median_mosaic_unc.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.median_mosaic_unc.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#FFFFFF">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.cov.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.cov.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.cov.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.cov.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+<tr bgcolor="#EAEAEA">
+<td>150.6960245</td><td>2.4596693</td><td>3613</td><td>4411</td><td>Enhanced</td><td>NO</td><td>images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.brightmask.fits</td><td><a href="/data/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.brightmask.fits"><img src='/images/download.png' border='0' align='bottom' alt='Icon'></img></a>&nbsp;&nbsp;<a href='javascript:firefly.getExternalViewer().plotFileOrURL("/irsadata/SPITZER/Enhanced/Imaging/images/6/0095/60095931/9/60095931-19/60095931.60095931-19.IRAC.4.brightmask.fits", "http://irsa.ipac.caltech.edu/data/SPITZER/Enhanced/Imaging/images%2F6%2F0095%2F60095931%2F9%2F60095931-19%2F60095931.60095931-19.IRAC.4.brightmask.fits")'><img src='/images/fftools-logo.png' border='0' align='bottom' alt='Icon'></img></a></td><td><center>same</center></td></tr>
+
+</table>
+
+      </center>
+    </center>
+  </form>
+
+<center>
+  <p></p><a href="/applications/Atlas/instructions.html">Click
+  here</a> for more information and instructions on using Atlas
+  <a href="/applications/Atlas/instructions.html"
+        target="help"><img src="/images/icons/help.gif"
+       border="0"
+       align="bottom" alt="Instructions"></img></a>
+</center>
+
+
+</div> <!-- end #content -->
+<div id="irsa-footer" style="position:absolute;left:0;right:0;margin-top:20px">
+<iframe src="/frontpage/footer.html" width="100%" frameborder=0 scrolling=0 seamless=1/>
+</div>  <!-- end #irsa-footer -->
+
+</body>
+</html>
+
