@@ -40,8 +40,8 @@ class RC3(RC3Catalog):
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("../rc3_galaxies_outside_{}_footprint.txt".format(survey.name),'a') # 'a' for append #'w')
-        unclean = open("../rc3_galaxies_unclean","a")
+        output = open("rc3_galaxies_outside_{}_footprint.txt".format(survey.name),'a') # 'a' for append #'w')
+        unclean = open("rc3_galaxies_unclean","a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
         #print (margin/radius)
@@ -56,15 +56,18 @@ class RC3(RC3Catalog):
         print (result)
         print (clean_result)
         
-        if (len(result)>1 and len(clean_result)>1):
-            if (result[0][:6]=="<html>"):
-                print("strange error from SQL server")
-                return -1
-            if (result[1]=='error_message\n' or clean_result[1]=='error_message\n'):
-                #Case where doing more than 60 queries in 1 minute
-                time.sleep(60)
+        if (len(result)>0 or len(clean_result)>0):
+            #if (result[0][:6]=="<html>"):
+                #print("strange error from SQL server")
+                #return -1
+            #if (result[1]=='error_message\n' or clean_result[1]=='error_message\n'):
+            if (result[0][0][1:6]=="ERROR" or clean_result[0][0][1:6]=="ERROR"):
+		#Case where doing more than 60 queries in 1 minute
+                print("ERROR: Too much query in 1 minute. Sleep for 60 second.")
+
+		time.sleep(60)
                 #results are messed up, need to re-query
-                # result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  ra between "+str(ra)+"-"+str(margin)+" and " +str(ra)+"+"+str(margin)+"and dec between "+str(dec)+"-"+str(margin)+" and "+ str(dec)+"+"+str(margin)).readlines()
+                #result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  ra between "+str(ra)+"-"+str(margin)+" and " +str(ra)+"+"+str(margin)+"and dec between "+str(dec)+"-"+str(margin)+" and "+ str(dec)+"+"+str(margin)).readlines()
                 # clean_result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  CLEAN =1 and ra between "+str(ra)+"-"+str(margin)+" and " +str(ra)+"+"+str(margin)+"and dec between "+str(dec)+"-"+str(margin)+" and "+ str(dec)+"+"+str(margin)).readlines()
                 result = survey.data_server.runCamcolFieldConverter(ra,dec,margin)
                 clean_result = survey.data_server.runCamcolFieldConverter(ra,dec,margin,True)
@@ -73,7 +76,7 @@ class RC3(RC3Catalog):
             #only print this once in the u band. If it is unclean in u band (ex. cosmic ray, bright star..etc) then it must be unclean in the other bands too.
             print ("Data contain unclean images")
             clean=False
-            unclean.write(str(ra)+"     "+str(dec)+"     "+str(radius)+"     "+str(pgc))
+            unclean.write(str(self.rc3_ra)+"     "+str(self.rc3_dec)+"     "+str(self.rc3_radius)+"     "+str(self.pgc)+"/n")
             # unclean.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),pgc))    
         # data =[]
         # count =0
@@ -188,7 +191,7 @@ class RC3(RC3Catalog):
                 # other_rc3s = sqlcl.query("SELECT distinct rc3.ra, rc3.dec FROM PhotoObj as po JOIN RC3 as rc3 ON rc3.objid = po.objid  WHERE po.ra between {0}-{1} and  {0}+{1} and po.dec between {2}-{3} and  {2}+{3}".format(str(rc3_ra),str(margin),str(rc3_dec),str(margin))).readlines()
                 other_rc3s = survey.data_server.otherRC3(rc3_ra,rc3_dec,margin)
                 other_rc3s_info=other_rc3s
-                print (other_rc3s)
+		print (other_rc3s)
                 print ("ra,dec of catalog sources")
                 #This list contains [pgc,ra,dec] as strings
                 # Cutting away PGC information
@@ -283,7 +286,7 @@ class RC3(RC3Catalog):
                		info ={}
                         for i in other_rc3s_info:
                             # list =i.split(',')
-                            pgc = int(i[0][6:])
+                            pgc = int(i[0][3:])
                             ra= float(i[1][:-1])
                             dec= float(i[2][:-1])
                             info[pgc]= [ra,dec]
@@ -342,17 +345,19 @@ class RC3(RC3Catalog):
                 return ['@','@',1.5*margin,'@','@']
             else : 
                 no_detection = open("../no_detected_rc3_candidate_nearby.txt",'a') # 'a' for append #'w')
-                no_detection.write("rc3_ra       rc3_dec        rc3_radius        pgc \n")
+                #no_detection.write("rc3_ra       rc3_dec        rc3_radius        pgc \n")
                 no_detection.write("{}       {}        {}        {} \n".format(self.rc3_ra,self.rc3_dec,self.rc3_radius,self.pgc))
         except (IOError):
             print ("File Not Found Error, if rfits is not found then mosaic an rfits")
-            self.mosaic_band('r',self.rc3_ra,self.rc3_dec,3*self.rc3_radius,self.rc3_radius,self.pgc,survey)
+            rfits=self.mosaic_band('r',self.rc3_ra,self.rc3_dec,3*self.rc3_radius,self.rc3_radius,self.pgc,survey)
             #Should I do source_info here again or autodetect??
-        # except:
-        #     print("Something went wrong when mosaicing PGC{}, just ignore it and keep mosaicing the next galaxy".format(str(pgc)))
-        #     error = open ("sourceinfo_error.txt","a")
-        #     error.write("{}       {}        {}        {} \n".format(self.rc3_ra,self.rc3_dec,self.rc3_radius,self.pgc))
-        #     return['x','x','x','x','x']
+            self.source_info(rfits,survey)
+        except:
+	   
+            print("Something went wrong when mosaicing PGC{}, just ignore it and keep mosaicing the next galaxy".format(str(pgc)))
+            error = open ("sourceinfo_error.txt","a")
+            error.write("{}       {}        {}        {} \n".format(self.rc3_ra,self.rc3_dec,self.rc3_radius,self.pgc))
+            return['x','x','x','x','x']
             
     #Unit Tested : Sucess
     def mosaic_all_bands(self,ra,dec,margin,radius,pgc,survey):
