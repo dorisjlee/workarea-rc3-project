@@ -17,7 +17,7 @@ class Gator(Server):
         URL query form : http://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?parameter1=value1&parameter2=value2&
         '''
         print ("querying: "+"wget {}http://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?{}{}".format(' "',query,'" '))
-        os.system("wget {}http://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?{}{}".format(' "',query,'" '))
+        os.system("wget -O result.txt {}http://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?{}{}".format(' "',query,'" '))
         # Parse results into a list 
     def getData(self,band,ra,dec,margin,survey):	
         '''
@@ -71,6 +71,7 @@ class Gator(Server):
         Units
         =====
         Search radius (radius): arcsecond
+        Search box (size): arcsecond
         '''
         if (survey.name=='2MASS'):
             catalog = 'fp_xsc' #Default as extended source catalog
@@ -79,7 +80,9 @@ class Gator(Server):
             pass
         ##############
         #NOTE THIS DOESN'T ACTUALLY FIND ANY OTHER RC3 GALAXY, IT JUST SEARCHES FOR THE TILES INSIDE THE BOX
-        query = "spatial=box&catalog={}&size={}&outfmt=1&POS={},{}".format(catalog,str(margin),str(ra),str(dec))
+        #degree to arcsecond conversion 
+        margin = margin*3600
+        query = "spatial=box&catalog={}&size={}&outfmt=1&objstr={},{}".format(catalog,str(margin),str(ra),str(dec))
         print(query)
         return self.query(query,survey,catalog)
         # TILES converter is not necessary because we can just get the image from getData
