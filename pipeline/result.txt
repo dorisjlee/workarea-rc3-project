@@ -2,12 +2,12 @@
 \fixlen = T
 \RowsRetrieved =                 3
 \ORIGIN  = 'IPAC Infrared Science Archive (IRSA), Caltech/JPL'
-\DATETIME= '2014-07-16 12:02:16'
-\DataTag = 'ADS/IRSA.Gator#2014/0716/120216_23748'
+\DATETIME= '2014-07-17 10:07:34'
+\DataTag = 'ADS/IRSA.Gator#2014/0717/100734_1828'
 \DATABASE= '2MASS All-Sky Extended Source Catalog (XSC) (fp_xsc)'
 \EQUINOX = 'J2000'
 \SKYAREA = 'box with center (0.08958,-2.61206) and length 216 arcsec.'
-\StatusFile = '/workspace/TMP_lxRy3e_23748/Gator/irsa/23748/log.23748.html'
+\StatusFile = '/workspace/TMP_6zbmYe_1828/Gator/irsa/1828/log.1828.html'
 \SQL     = 'WHERE (no constraints) 
 \SQL     = 'SELECT (29 column names follow in next row.)'
 \ 
