@@ -40,7 +40,7 @@ class RC3(RC3Catalog):
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("../rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
+        output = open("rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
         unclean = open("../rc3_galaxies_unclean","a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
@@ -65,11 +65,11 @@ class RC3(RC3Catalog):
 
         if (len(result)==0):             
             if (DEBUG): print ('The given ra, dec of this galaxy does not lie in the survey footprint. Onto the next galaxy!')#Exit Program.'
-            if (band=='u'):
-                # not-in-footprint only written when mosaicing first band
+            # if (band=='r'):
+                # not-in-footprint only written when mosaicing first (i.e. r) band
                 # this is only relavant in the case where we call mosaic_band by mosaicAll 
                 # since if you are only mosaicing one galaxy then this print statement is spit back.
-                output.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),str(pgc)))
+            output.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),str(pgc)))
             return -1 #special value reserved for not in survey footprint galaxies
         else :
             if (DEBUG): 
