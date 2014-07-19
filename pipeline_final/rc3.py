@@ -3,6 +3,7 @@
 # from catalog import Catalog
 from rc3Catalog import RC3Catalog
 from sdss import SDSS
+from twoMass import TwoMass
 import montage_wrapper as montage
 from astropy.io import fits as pyfits
 import os
@@ -14,8 +15,6 @@ import fnmatch
 import numpy as np
 import heapq
 import time
-# Assume you are inside directory (rfits/) where you have pulled all the g band fit files 
-# find . -name "SDSS_r_*.fits" -type f -exec cp {} ./rfits \; 
 
 class RC3(RC3Catalog):
     def __init__(self, rc3_ra, rc3_dec,rc3_radius,pgc, num_iterations=0):
@@ -40,7 +39,7 @@ class RC3(RC3Catalog):
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
+        output = open("../rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
         unclean = open("../rc3_galaxies_unclean","a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
@@ -49,9 +48,6 @@ class RC3(RC3Catalog):
         #result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  ra between {0}-{1} and  {0}+{1}and dec between {2}-{3} and  {2}+{3}".format(str(ra),str(margin),str(dec),str(margin))).readlines()
         result = survey.data_server.runCamcolFieldConverter(ra,dec,margin)
         clean_result = survey.data_server.runCamcolFieldConverter(ra,dec,margin,True)
-        # result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  ra between "+str(ra)+"-"+str(margin)+" and " +str(ra)+"+"+str(margin)+"and dec between "+str(dec)+"-"+str(margin)+" and "+ str(dec)+"+"+str(margin)).readlines()
-        # clean_result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  CLEAN =1 and ra between "+str(ra)+"-"+str(margin)+" and " +str(ra)+"+"+str(margin)+"and dec between "+str(dec)+"-"+str(margin)+" and "+ str(dec)+"+"+str(margin)).readlines()
-        # clean_result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  CLEAN =1 and ra between {0}-{1} and  {0}+{1}and dec between {2}-{3} and  {2}+{3}".format(str(ra),str(margin),str(dec),str(margin))) .readlines()
         clean = True
         print ("result: "+str(result))
         print ("clean_result: "+str(clean_result))
@@ -88,9 +84,11 @@ class RC3(RC3Catalog):
             out = "frame-"+str(band)+"-"+str(i[0]).zfill(6)+"-"+str(i[1])+"-"+str(i[2]).zfill(4)
 
         os.chdir("../")
+        
         if (DEBUG) : print("Creating mosaic for "+band+" band.")
-        outfile_r="SDSS_"+band+"_"+str(ra)+"_"+str(dec)+"r.fits"
-        outfile="SDSS_"+band+"_"+str(ra)+"_"+str(dec)+".fits"
+        outfile_r = "{}_{}_{}_{}r.fits".format(survey.name,band,ra,dec)
+        outfile = "{}_{}_{}_{}.fits".format(survey.name,band,ra,dec)
+
         if (len(result)==1):
             #With header info, len of processed result list is 1 if there is only 1 field lying in the margin, simply do mSubImage without mosaicing
             #This patch should not be necessary but the program is aparently not mosaicing for the case where there is only one field.
@@ -107,7 +105,15 @@ class RC3(RC3Catalog):
             montage.mHdr(str(ra)+" "+str(dec),margin,out+".hdr")
             if (DEBUG): print ("Reprojecting images")
             os.chdir("raw")
-            montage.mProjExec("../images.tbl","../"+out+".hdr","../projected", "../stats.tbl") 
+            print(os.getcwd())
+            montage.mProjExec("../images.tbl","../"+out+".hdr","../projected", "../stats.tbl")#,debug=True) 
+            if os.listdir("../projected") == []: 
+                print "Projection Failed. No projected images produced. Skip to the next galaxy" 
+                os.chdir("../../") #Get out of directory for that galaxy and move on
+                os.system("rm -r r")
+                failed_projection = open ("failed_projection","a")
+                failed_projection.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),str(pgc)))
+                return -1 # masking with special value reserved for not in survey footprint galaxies
             os.chdir("..")
             montage.mImgtbl("projected","pimages.tbl")
             os.chdir("projected")
@@ -150,7 +156,7 @@ class RC3(RC3Catalog):
             print ("------------------source_info----------------------")
             file = r_fits_filename 
             print("Source info for {}".format(file))
-            if (file ==-1): #special value reserved for not in SDSS footprint galaxies
+            if (file ==-1): #special value reserved for not in survey footprint galaxies
                 return [-1,-1,-1,-1,-1]
 
             # File info 
@@ -192,7 +198,7 @@ class RC3(RC3Catalog):
             if (len(distances)>1):
                 print ("More than 2 galaxies inside field!")   
                 print (distances)
-            # print (distances)                           
+                          
             #Conduct pairwise comparison
             catalog = open("test.cat",'r')
             #Creating a list of radius
@@ -207,7 +213,6 @@ class RC3(RC3Catalog):
                     coord = np.array([float(line[2]),float(line[3])])
                     sextract_dict[radius]=coord
             print ("Radius: "+str(radius_list))
-            print ("SExtract_dict: "+str(sextract_dict))
             if (len(sextract_dict)>0):
                 #special value that indicate empty list (no object detected by SExtractor)
                 radii='@'
@@ -355,9 +360,9 @@ class RC3(RC3Catalog):
         for band in bands:
             self.mosaic_band(band,ra,dec,margin,radius,pgc,survey)
             #os.chdir("../")
-        os.system("stiff  SDSS_i_{0}_{1}.fits  SDSS_r_{0}_{1}.fits SDSS_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  SDSS_{0}_{1}_BEST.tiff -MAX_TYPE QUANTILE  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.997 -COLOUR_SAT  7 -MIN_TYPE QUANTILE -MIN_LEVEL 1  -GAMMA_FAC 0.7 ".format(str(ra),str(dec)))
+        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_BEST.tiff -MAX_TYPE QUANTILE  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.997 -COLOUR_SAT  7 -MIN_TYPE QUANTILE -MIN_LEVEL 1  -GAMMA_FAC 0.7 ".format(ra,dec,survey.name)
         # Image for emphasizing low-surface sturcture
-        os.system("stiff  SDSS_i_{0}_{1}.fits  SDSS_r_{0}_{1}.fits SDSS_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  SDSS_{0}_{1}_LOW.tiff  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.99 -COLOUR_SAT  5  -MIN_TYPE QUANTILE -MIN_LEVEL 1 -GAMMA_FAC 0.8 ".format(str(ra),str(dec))) 
+        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_LOW.tiff  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.99 -COLOUR_SAT  5  -MIN_TYPE QUANTILE -MIN_LEVEL 1 -GAMMA_FAC 0.8 ".format(ra,dec,survey.name) 
         if (not(os.path.exists("stiff.xml"))):
             #If stiff file exist then it means stiff run is sucessful
             #sometimes stiff doesn't run because 
@@ -368,7 +373,5 @@ class RC3(RC3Catalog):
  
         os.system("rm stiff.xml")
         os.chdir("../")
-        # Move the finished rfit files outside so that, if terminate during the program, easier to recongnize which is already done and which is not.
-        # shutil.move("SDSS_r_{0}_{1}.fits".format(str(self.rc3_ra),str(self.rc3_dec)),"../finished_rfits")
         print ("Completed Mosaic")
   

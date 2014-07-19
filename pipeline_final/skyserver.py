@@ -1,3 +1,4 @@
+
 # Class for interacting with SDSS's SkyServer
 from  server import Server
 import sqlcl

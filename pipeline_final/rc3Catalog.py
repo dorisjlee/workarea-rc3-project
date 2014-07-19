@@ -69,17 +69,19 @@ class RC3Catalog(Catalog):
 					# if we are not in the Outer directory where rc3Catalog.py Is located at 
 					# then we are stuck inside some sort of position directory.
 					# Must get out to prevent spiraling recursion.
+					print (os.getcwd())
 					print ("Get out of cwd")
 					os.chdir("..")
+				print (os.getcwd())
 				mosaicAll_error=open("mosaicAll_error","a")
 				mosaicAll_error.write("{}       {}        {}        {} \n".format(str(obj.rc3_ra),str(obj.rc3_dec),str(obj.rc3_radius),str(obj.pgc)))
 				pass
 
-	def mosaicAllDebug():
-		'''
-		Produce all band FITS files and color mosaic for every objects inside the Catalog that lies within the footprint of the given survey
-		after the @ sign.
-		'''
+	# def mosaicAllDebug(self):
+	# 	'''
+	# 	Produce all band FITS files and color mosaic for every objects inside the Catalog that lies within the footprint of the given survey
+	# 	after the @ sign.
+	# 	'''
 
 	def printAll(self):
 		pass
