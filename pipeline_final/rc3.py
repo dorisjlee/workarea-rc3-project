@@ -46,8 +46,8 @@ class RC3(RC3Catalog):
         #print (margin/radius)
         if (DEBUG) : print ("Querying data that lies inside margin")
         #result = sqlcl.query( "SELECT distinct run,camcol,field FROM PhotoObj WHERE  ra between {0}-{1} and  {0}+{1}and dec between {2}-{3} and  {2}+{3}".format(str(ra),str(margin),str(dec),str(margin))).readlines()
-        result = survey.data_server.runCamcolFieldConverter(ra,dec,margin)
-        clean_result = survey.data_server.runCamcolFieldConverter(ra,dec,margin,True)
+        result = survey.data_server.surveyFieldConverter(ra,dec,margin)
+        clean_result = survey.data_server.surveyFieldConverter(ra,dec,margin,True)
         clean = True
         print ("result: "+str(result))
         print ("clean_result: "+str(clean_result))
@@ -94,7 +94,23 @@ class RC3(RC3Catalog):
             #This patch should not be necessary but the program is aparently not mosaicing for the case where there is only one field.
             print ("Only one field in region of interest")
             os.chdir("raw")
-            montage.mSubimage(out+".fits",outfile,ra,dec,2*margin) # mSubImage takes xsize which should be twice the margin (margin measures center to edge of image)
+            try:
+                montage.mSubimage(out+".fits",outfile,ra,dec,2*margin) # mSubImage takes xsize which should be twice the margin (margin measures center to edge of image)
+            except(montage.status.MontageError):
+                print ("montage_wrapper.status.MontageError: mSubimage: Region outside image.")
+                try :#give it one last chance
+                    montage.mSubimage(out+".fits",outfile,ra,dec,margin)
+                except(montage.status.MontageError):
+                    print("doesn't work after trying half the margin")
+                    pass
+                print (os.getcwd())
+                os.chdir("../../") #Get out of directory for that galaxy and move on
+                os.system("rm -r r")
+                print(os.getcwd())
+                failed_msubimage = open ("failed_msubimage","a")
+                failed_msubimage.write("{}     {}     {}     {} \n".format(str(ra),str(dec),str(radius),str(pgc)))
+                return -1 # masking with special value reserved for not in survey footprint galaxies
+        
             hdulist = pyfits.open(outfile)
             if (os.path.exists("../../"+outfile)):
                 os.system("rm ../../"+outfile)
@@ -360,9 +376,9 @@ class RC3(RC3Catalog):
         for band in bands:
             self.mosaic_band(band,ra,dec,margin,radius,pgc,survey)
             #os.chdir("../")
-        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_BEST.tiff -MAX_TYPE QUANTILE  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.997 -COLOUR_SAT  7 -MIN_TYPE QUANTILE -MIN_LEVEL 1  -GAMMA_FAC 0.7 ".format(ra,dec,survey.name)
+        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_BEST.tiff -MAX_TYPE QUANTILE  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.997 -COLOUR_SAT  7 -MIN_TYPE QUANTILE -MIN_LEVEL 1  -GAMMA_FAC 0.7 ".format(ra,dec,survey.name))
         # Image for emphasizing low-surface sturcture
-        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_LOW.tiff  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.99 -COLOUR_SAT  5  -MIN_TYPE QUANTILE -MIN_LEVEL 1 -GAMMA_FAC 0.8 ".format(ra,dec,survey.name) 
+        os.system("stiff  {2}_i_{0}_{1}.fits  {2}_r_{0}_{1}.fits {2}_g_{0}_{1}.fits  -c stiff.conf  -OUTFILE_NAME  {2}_{0}_{1}_LOW.tiff  -MAX_TYPE QUANTILE  -MAX_LEVEL 0.99 -COLOUR_SAT  5  -MIN_TYPE QUANTILE -MIN_LEVEL 1 -GAMMA_FAC 0.8 ".format(ra,dec,survey.name)) 
         if (not(os.path.exists("stiff.xml"))):
             #If stiff file exist then it means stiff run is sucessful
             #sometimes stiff doesn't run because 

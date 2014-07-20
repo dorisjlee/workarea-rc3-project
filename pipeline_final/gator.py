@@ -8,6 +8,12 @@ from  server import Server
 import abc
 import re
 import os
+#####################
+#Supressing warnings due to version differences in astroquery and astropy (dev 0.4)
+import warnings
+warnings.filterwarnings('ignore',message='profile')
+warnings.filterwarnings('ignore',message='_astropy_init')
+warnings.filterwarnings('ignore',message='ConfigurationDefaultMissingWarning ')
 class Gator(Server):
     '''
     Possible surveys: 2MASS, WISE, IRAS
@@ -103,6 +109,8 @@ class Gator(Server):
         return other_rc3s
 
         # TILES converter is not necessary because we can just get the image from getData
+    def surveyFieldConverter(self,ra,dec,margin,need_clean=False):
+        return -1
         #This is actually not necessary because the SExtract_dict and radius is returned by SExtractor value  mpt frp, querying results/
     # def otherRC3info(self,ra,dec,margin,survey,catalog='default'):
     #     '''
