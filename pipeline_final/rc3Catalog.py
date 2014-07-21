@@ -60,7 +60,8 @@ class RC3Catalog(Catalog):
 		for obj in self.allObj:
 			print("Working on PGC{}, at({} , {})".format(str(obj.pgc), str(obj.rc3_ra),str(obj.rc3_dec)))
 			try:
-				rfits=obj.mosaic_band('r',obj.rc3_ra,obj.rc3_dec,3*obj.rc3_radius,obj.rc3_radius,obj.pgc,survey)
+				# rfits=obj.mosaic_band('r',obj.rc3_ra,obj.rc3_dec,3*obj.rc3_radius,obj.rc3_radius,obj.pgc,survey)
+				rfits=obj.mosaic_band(survey.best_band,obj.rc3_ra,obj.rc3_dec,3*obj.rc3_radius,obj.rc3_radius,obj.pgc,survey)
 				if(rfits!=-1): #Special value for outside footprint or error , no rfits produced
 					obj.source_info(rfits,survey)
 			except(AssertionError):

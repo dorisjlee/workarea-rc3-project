@@ -1,6 +1,7 @@
 # Class for interacting with IPAC's  Gator API 
 from astropy import *
 from astroquery.vizier import *
+from astroquery.irsa import Irsa
 import astropy.units as u
 from astropy.coordinates import SkyCoord
 #####################
@@ -42,7 +43,6 @@ class Gator(Server):
 		POS=ra,dec &SIZE = margin
         '''
 
-
         # print ("getData")
         out = "FORMAT=image/fits&band={}&POS={},{}&SIZE={}".format(band,str(ra),str(dec),str(margin))
         os.system("wget -O tbl.xml {}http://irsa.ipac.caltech.edu/cgi-bin/{}/IM/nph-im_sia?{}{}".format(' "',survey.name,out,'" '))
@@ -56,9 +56,11 @@ class Gator(Server):
                 # print line
                 #The URL is stored in the line two lines after <TR>
                 # print line[:4]
+                # print line
                 if (line[:4] =="<TR>" or n==1):
                     #passing till 2 lines down <TR>
                     n+=1
+                    # print ("pass")
                     pass
                 elif (n==2):
                     n=0
@@ -77,7 +79,7 @@ class Gator(Server):
     #########################
     #    Query Builder		#
     #########################
-    def otherRC3(self,ra,dec,margin,survey,cat='VII/155/rc3'): 
+    def otherRC3(self,ra,dec,margin,survey): 
         '''
         Given ra,dec, pgc of an RC3 galaxy, return a list of other rc3 that lies in the same margin field.
         in the form including the original galaxy of interest
@@ -96,21 +98,35 @@ class Gator(Server):
             pass
         ##############
         #query = "spatial=box&catalog={}&size={}&outfmt=1&objstr={},{}".format(catalog,str(margin),str(ra),str(dec))
-        rc3Cat = Vizier(catalog=cat)
+        rc3Cat = Vizier(catalog='VII/155/rc3')
         pos =SkyCoord(ra* u.deg,dec* u.deg, frame='fk5')
         print(pos)
-        rc3_matches=rc3Cat.query_region(pos, radius=margin*u.deg)
-        print (rc3_matches)
+        rc3_matches=rc3Cat.query_region(pos, radius=2*margin*u.deg)
+        print (rc3_matches[0])
         other_rc3s=[]
         if (len(rc3_matches)!=0):
             # It is practically impossible for len to beb zero because the galaxy of interest would always detect itself
             # unless we are using it as a rc3 finder for any ra,dec
-            other_rc3s = list(rc3_matches[0]['PGC'].data)
+            print (len(rc3_matches[0]['PGC']))
+            for i in range(len(rc3_matches[0]['PGC'])):
+                lst = []
+                # print (rc3_matches[0]['PGC'].data)
+                lst.append(rc3_matches[0]['PGC'].data[i])
+                lst.append(rc3_matches[0]['_RAJ2000'].data[i])
+                lst.append(rc3_matches[0]['_DEJ2000'].data[i])
+                other_rc3s.append(lst)
         return other_rc3s
-
         # TILES converter is not necessary because we can just get the image from getData
-    def surveyFieldConverter(self,ra,dec,margin,need_clean=False):
-        return -1
+    def surveyFieldConverter(self,ra,dec,margin,need_clean=False,cat = 'fp_xsc'):
+        '''
+        for 2MASS return the designation for each detected source in search field 
+        '''
+        pos =SkyCoord(ra* u.deg,dec* u.deg, frame='fk5')
+        tbl = Irsa.query_region(pos,catalog=cat, spatial='Box',width=2*margin*u.deg)
+        # print (tbl)
+        # print(list(tbl['designation']))
+        return list(tbl['designation'])
+        
         #This is actually not necessary because the SExtract_dict and radius is returned by SExtractor value  mpt frp, querying results/
     # def otherRC3info(self,ra,dec,margin,survey,catalog='default'):
     #     '''

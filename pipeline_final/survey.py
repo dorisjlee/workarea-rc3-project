@@ -10,7 +10,7 @@ class Survey(object):
         # Preset defaults for the specific survey
         self.bands = []
         self.color_bands= []
-        self.best_band=[]
+        self.best_band='@'
         self.pixel_size= -1
         self.data_server=self._initServer()
         # Mosaic Program Settings
