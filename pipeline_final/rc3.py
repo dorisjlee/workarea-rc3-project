@@ -39,8 +39,8 @@ class RC3(RC3Catalog):
         '''
         print ("------------------mosaic_band----------------------")
         DEBUG = True
-        output = open("rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
-        unclean = open("rc3_galaxies_unclean_{}".format(survey.name),"a")
+        output = open("../rc3_galaxies_outside_{}_footprint".format(survey.name),'a') # 'a' for append #'w')
+        unclean = open("../rc3_galaxies_unclean_{}".format(survey.name),"a")
         # filename = "{},{}".format(str(ra),str(dec))
         filename = str(ra)+str(dec)
         #print (margin/radius)
@@ -109,6 +109,8 @@ class RC3(RC3Catalog):
                 except(montage.status.MontageError):
                     print("Doesn't work after trying half the margin, just keep the raw FITS file")
                     # And continue source infoing, don't mask as not in footprint
+                    if (os.path.exists("../../{}".format(outfile))):
+                        os.system("rm -r {}".format("../../{}".format(outfile)))
                     shutil.move(outfile,"../..")
                     os.chdir("../../")
                     os.system("rm -r {}".format(survey.best_band))
