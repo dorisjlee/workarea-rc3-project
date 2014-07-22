@@ -255,7 +255,7 @@ class RC3(RC3Catalog):
                 radii='@'
                 new_ra='@'
                 new_dec='@'
-                catalog = open("test.cat",'r')
+                # catalog = open("test.cat",'r')
                 n=-1
                 if (len(distances)!=0):
                     # if there is source confusion, then we want to keep the nth largest radius
@@ -306,11 +306,8 @@ class RC3(RC3Catalog):
                     print (other_rc3s_info)
                     info ={}
                     for i in other_rc3s_info:
-                        # list =i.split(',')
                         pgc = int(i[0][3:])
-                        # ra= float(i[1][:-1])
                         ra= float(i[1])
-                        # dec= float(i[2][:-1])
                         dec= float(i[2])
                         info[pgc]= [ra,dec]
                     print ("info"+str(info))
@@ -320,7 +317,6 @@ class RC3(RC3Catalog):
                 else:
                     print ("Source is Obvious")
                     n=1 # if no source confusion then just keep the maximum radius
-                    catalog = open("test.cat",'r')
                     #Creating a list of radius
                     radius = []
                     for line in catalog:
@@ -332,7 +328,6 @@ class RC3(RC3Catalog):
                     radii='@'
                     new_ra='@'
                     new_dec='@'
-                    catalog = open("test.cat",'r')
                     # If there is no other RC3 in the field, it means the largest galaxy in the field is the RC3 we are interested in
                     # So find max radius and treat as if it is rc3
                     for i in catalog:
@@ -357,13 +352,10 @@ class RC3(RC3Catalog):
                     updated.write("{}       {}       {}       {}       {}       {} \n".format(rc3_ra,rc3_dec,new_ra,new_dec,radii, pgc))
                     self.mosaic_all_bands(new_ra,new_dec,margin,radii,pgc,survey)
                     return [float(new_ra),float(new_dec),margin,radii,pgc] 
-                    # margin was already set as 6*rc3_radius during initial_run
+                    # margin was already set as 2*rc3_radius during the first run
                     # all additional mosaicking steps shoudl be 1.5 times this 
                 #else: #radii =@ if all SExtracted radius is <15 
             print ("No detected RC3 sources in image. Mosaic using a larger margin")
-            # original automated mosaic program default 6*radius
-            # call on mosaic program with +50% original margin
-            # r_mosaic_filename = self.mosaic_band('r',rc3_ra,rc3_dec,1.5*margin,rc3_radius,pgc,survey)
             r_mosaic_filename = self.mosaic_band(survey.best_band,rc3_ra,rc3_dec,1.5*margin,rc3_radius,pgc,survey)
             self.source_info(r_mosaic_filename,survey)
             return ['@','@',1.5*margin,'@','@']
