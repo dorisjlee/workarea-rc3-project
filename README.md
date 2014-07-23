@@ -1,7 +1,7 @@
 rc3-workarea
 ============
 
-Work area for rc3 catalog project
+Scrap Notes for working on rc3 catalog project
 - [Installing and Using Python Montage Wrapper](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/5-18-2014.ipynb)
 - [m101 Montage Example](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/m101%20Mosaic.ipynb)
 - [Testing rc3](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/May2014notebooks/5-21-2014%20--Testing%20rc3.ipynb)
@@ -23,3 +23,15 @@ Work area for rc3 catalog project
 - [06-07-08-2014 Coordinate Conversion for more accurate galactic center](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-07-08-2014%20Coordinate%20conversion%20for%20a%20more%20accurate%20galactic%20center%20.ipynb)
 - [06-08-2014 Fine Tuning the STIFF settings and formula by experimenting on different galaxies](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-08-2014%20Fine%20tuning%20the%20stiff%20settings%20%20and%20margin%20formula%20by%20experimenting%20on%20different%20galaxies%20.ipynb)
 - [List of Off Center Galaxies](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/List%20of%20%22Off%20Center%22%20galaxies.ipynb)
+- [06-10-2014 Color Problem II](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-10-2014%20Color%20Problem%20(II).ipynb)
+- [06-10-2014 Disk Space Calculation](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-10-2014%20Disk%20Space%20Calculation.ipynb)
+- [06-10-2014 Trying to fix the color problem](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-10-2014%20Trying%20to%20fix%20the%20color%20problem.ipynb)
+- [ 06-11-2014 Heavily artifact images.ipynb](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-11-2014%20Heavily%20artifact%20images.ipynb)
+- [06-11-2014 Pixel Histogram](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-11-2014%20Pixel%20Histogram.ipynb)
+- [06-11-2014 Planning Database Webapp Thing](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-11-2014%20Planning%20Database%20Webapp%20Thing.ipynb)
+- [06-12-2014 Intro to database](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-12-2014%20Intro%20to%20database.ipynb)
+- [06-13-2014 Testing Pixel Histogram on other galaxies .ipynb](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-13-2014%20Testing%20Pixel%20Histogram%20on%20other%20galaxies%20.ipynb)
+- [06-13-2014 Testing Pixel Histogram on other galaxies II](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-13-2014%20Testing%20Pixel%20Histogram%20on%20other%20galaxies%20II.ipynb)
+- [06-14-2014 Building the rc3 database ](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-14-2014%20Building%20the%20rc3%20database%20.ipynb)
+- [06-14-2014 Improvements to mosaicing program](http://nbviewer.ipython.org/urls/raw.github.com/dorislee0309/workarea-rc3-project/master/notebooks/June2014notebooks/06-14-2014%20Improvements%20to%20mosaicing%20program.ipynb)
+- [ 06-15-2014 BitMasks and Image Quality flags in SDSS](http://nbviewer.ipython.org/github/dorislee0309/workarea-rc3-project/blob/master/notebooks/June2014notebooks/06-15-2014%20BitMasks%20and%20Image%20Quality%20flags%20in%20SDSS.ipynb)
