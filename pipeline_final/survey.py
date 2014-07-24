@@ -28,12 +28,13 @@ class Survey(object):
             #Not implemented yet
             # return MAST()
             pass
+        elif (self.name == 'DSS'):
+            return DSSServer()
         elif (self.name=='SDSS'):
             # print ("sdss server")
             # print (SkyServer())
             return SkyServer()
             # print (self.data_server)
         else: #Generic
-            print ("Unsupported survey type")
-            return Server()
+            raise TypeError("Unsupported survey type")
         
