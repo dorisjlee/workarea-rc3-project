@@ -17,7 +17,7 @@ class DSSServer(Server):
         Query the server database
         URL query form : http://irsa.ipac.caltech.edu/applications/FinderChart/docs/finderProgramInterface.html
         '''
-        # print ("querying: "+"wget {}http://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?{}{}".format(' "',query,'" '))
+        print ("querying: "+"wget {}http://irsa.ipac.caltech.edu/cgi-bin/FinderChart/nph-finder?{}{}".format(' "',query,'" '))
         
         os.system("wget -O result.txt {}http://irsa.ipac.caltech.edu/cgi-bin/FinderChart/nph-finder?{}{}".format(' "',query,'" '))
 
@@ -33,11 +33,12 @@ class DSSServer(Server):
         '''
  		# Margin value conversion degree to arcminute 1 degree = 60 arcminutes
  		# Can not specify band?
-        q = "locstr={}+{}&survey=dss&mode=prog&subsetsize={}".format(ra,dec,60*margin)
+        q = "locstr={}+{}&survey=dss&mode=prog".format(ra,dec)#,60*margin)
         self.query(q)
         result = XMLparse(band,ra,dec,margin)
         filename = result[0]
         url = result[1]
+        print ("result:{}".format(result))
         print ("Downloading "+filename)
         os.system("wget -O {} {}{}{} ".format(filename,' "',url,'" '))
     	# return i 
@@ -57,7 +58,7 @@ class DSSServer(Server):
         lst = []
         #allbandPLATEID=""
         #only testing in the 1b band, assuming that if x photographic plates span the search area, than the same case goes for the other bands.
-        q = "locstr={}+{}&survey=dss&mode=prog&subsetsize={}".format(ra,dec,60*margin)
+        q = "locstr={}+{}&survey=dss&mode=prog".format(ra,dec)#,60*margin)
         self.query(q)
         result = XMLparse("1r",ra,dec,margin)
         filename = result[0]
@@ -93,7 +94,7 @@ def XMLparse(band,ra,dec,margin):
                 n=0
                 # print ("here")
                 url = line.split('[')[-1].split(']')[0].strip()
-                # print (url)
+                print (url)
                 if (i/5>1): # Assuming the highly unlikely case that there are more than 2 photographic plates spanning the search area
                     #preventing other downloads to override the initial file
                     filename = "DSS_{}_{}_{}_{}.fits".format(band,str(ra),str(dec),str(i/5))
@@ -118,6 +119,10 @@ def XMLparse(band,ra,dec,margin):
                     print('POSSIIIR')
                     break
                 i+=1
+        print (filename)
+        print (url)
+        print (i)
+        os.system("rm result.txt")
         return [filename,url,i]    
 
 
