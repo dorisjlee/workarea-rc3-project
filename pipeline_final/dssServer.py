@@ -41,59 +41,73 @@ class DSSServer(Server):
         with open("result.txt") as f:
             n=0
             i=0
+            url = " "
+            filename=" "
             for line in f:
                 # The URL is stored in the line  after <fitsurl>
                 if (line.strip() =="<fitsurl>"): #or n==0):
-                    # print ("n: "+str(n))
-                    # print ("i: "+str(i))
                     # passing till 1 lines down <fitsurl>
                     n+=1
                     pass
                 elif (n==1):
-                    # n=0
+                    n=0
                     # print ("here")
                     url = line.split('[')[-1].split(']')[0].strip()
-                    print (url)
-                    if (i>0):
+                    # print (url)
+                    if (i/5>1): # Assuming the highly unlikely case that there are more than 2 photographic plates spanning the search area
                         #preventing other downloads to override the initial file
-                        filename = "{}_{}_{}_{}_{}.fits".format(survey,band,str(ra),str(dec),str(i))
+                        filename = "{}_{}_{}_{}_{}.fits".format(survey,band,str(ra),str(dec),str(i/5))
                     else:
                         filename = "{}_{}_{}_{}.fits".format(survey,band,str(ra),str(dec))
-                    print ("wget -O {} {}{}{} ".format(filename,' "',url,'" '))
-                    os.system("wget -O {} {}{}{} ".format(filename,' "',url,'" '))
+                    b = url.split("/")[-1][:-9]
+                    # print ("{},{}".format(b,i))
+                    # Assigning url to only Band Filters specified by param
+                    if ( band=='1b' and b=='poss1_blue' and i==0):
+                        print('POSSIB')
+                        break
+                    elif (band == '1r' and b=='poss1_red' and i ==1):
+                        print ('POSSIR')
+                        break
+                    elif (band == '2b' and b=='poss2ukstu_blue' and i ==2):
+                        print('POSSIIB')
+                        break
+                    elif (band == '2r' and b=='poss2ukstu_red' and i ==3):
+                        print ('POSSIIR')
+                        break
+                    elif (band == '2ir' and b=='poss2ukstu_ir' and i ==4):
+                        print('POSSIIIR')
+                        break
                     i+=1
-
+            os.system("wget -O {} {}{}{} ".format(filename,' "',url,'" '))
+            return i 
+            #not typical of getData, but I want it to return the number of plates collected 
+            #so that I could use this in  surveyFieldConverter
 
     #########################
     #    Query Builder		#
-    #########################
-    def otherRC3(self,ra,dec,margin,survey): 
+    ######################### 
+    def surveyFieldConverter(self,ra,dec,margin):
         '''
-        Given ra,dec, pgc of an RC3 galaxy, return a list of other rc3 that lies in the same margin field.
-        in the form including the original galaxy of interest
+        for DSS return all the all-band PLATEID that lies in the search field 
+        the all-band PLATEID is a string concatenation of all 5 PLATEID for the
+        particular region of interest, one for each band of the DSS, so that it is 
+        treated as one "basic imaging entity".
+        '''
+        lst = []
+        #allbandPLATEID=""
+        #only testing in the 1b band, assuming that if x photographic plates span the search area, than the same case goes for the other bands.
+        i=self.getData('1b',ra,dec,margin) 
+        # for i in ['1b','1r','2b','2r','2ir']:
+        # 	filename = "DSS_{}_{}_{}.fits".format(band,ra,dec)
+        # 	hdulist = pyfits.open(filename)
+        # 	allbandPLATEID=allbandPLATEID+"_"+hdulist[0].header['PLATEID']
+        # lst.append(allbandPLATEID)
+        # # Remove all the files after obtaining info needed
+        for n in range((i/5)+1):
+        	# Fake name made by us
+            lst.append("PhotoPlate{}".format(n))
+        os.system("rm DSS_1b_{}_{}.fits".format(ra,dec))
+        return lst
 
-        [['PGC54', '0.158083', '28.384556'], ['PGC58', '0.183333', '28.401444']]
-
-        '''
-        g = gator()
-        # Mask as 2MASS and using Vizier (Can not find DSS data in Vizier --> scattered in multiple catalog?)
-        tm = TwoMASS()
-        return g.other_rc3s(ra,dec,margin,tm)
-
-        # TILES converter is not necessary because we can just get the image from getData
-    def surveyFieldConverter(self,ra,dec,margin,need_clean=False,cat = 'fp_xsc'):
-        '''
-        for 2MASS return the designation for each detected source in search field 
-        '''
-        # pos =SkyCoord(ra* u.deg,dec* u.deg, frame='fk5')
-        # tbl = Irsa.query_region(pos,catalog=cat, spatial='Box',width=2*margin*u.deg)
-        # lst=[]
-        # if (need_clean and len(tbl)>0):
-        #     for i in range(len(tbl['designation'])):
-        #         if (tbl[0]['cc_flg']=='0'):
-        #             lst.append(tbl[i]['designation'])
-        #     return lst
-        # else:
-        #     return list(tbl['designation'])
 
         
