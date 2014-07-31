@@ -236,14 +236,13 @@ class RC3(RC3Catalog):
                 margin = 2*self.rc3_radius
                 pgc = self.pgc
                 pass
-            # Source Extraction
 
+            # Source Extraction
             # Remember to switch to command "sextractor" for Ubuntu/ Linux, "sex" for Mac
             os.system("sextractor {} {}".format(survey.sextractor_params, file))
 
             # A list of other RC3 galaxies that lies in the field
             # In the case of source confusion, find all the rc3 that lies in the field.
-            # other_rc3s = sqlcl.query("SELECT distinct rc3.ra, rc3.dec FROM PhotoObj as po JOIN RC3 as rc3 ON rc3.objid = po.objid  WHERE po.ra between {0}-{1} and  {0}+{1} and po.dec between {2}-{3} and  {2}+{3}".format(str(rc3_ra),str(margin),str(rc3_dec),str(margin))).readlines()
             other_rc3s = survey.data_server.otherRC3(rc3_ra,rc3_dec,margin)#,survey)
             other_rc3s_info=other_rc3s
             print (other_rc3s)
