@@ -16,7 +16,6 @@ class Survey(object):
         self.data_server=self._initServer()
         # Mosaic Program Settings
         self.sextractor_params={} 
-        self.montage_params={}
         self.stiff_params={}
     # def search(query,database):
 
